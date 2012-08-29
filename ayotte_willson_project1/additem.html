@@ -15,7 +15,7 @@ Term:  1208
 		<meta name="HandheldFriendly" content="True" /><!-- optd for other phones -->
 		<meta name="MobileOptimized" content="320" /><!-- opted for other phones -->
 		<title>Add/Edit Apartments</title><!-- title of page, shows in a tab or head of browser -->
-		<link rel="stylesheet" type="text/css" href="css/style.css"><!-- Importing the style sheet -->
+		<link rel="stylesheet" type="text/css" href="css/style.css" /><!-- Importing the style sheet -->
 	</head>
 	<body>
 		<h1>Add Vacant Aparments</h1><!-- header title of html page -->
@@ -32,12 +32,17 @@ Term:  1208
 					<li><label for="rdyDate">Ready Date:</label><input type="date" id="rdyDate" /><br /><br /> <!-- ready date for the apartment -->
 					<li><label for="isPower">Power?</label><input type="checkbox" id="isPower" value="Yes" class="checkbox" /><br /> <!-- is the power on in the aprtment -->
 					<li><label for="isWhiteLock">Whitelock?</label><input type="checkbox" id="isWhiteLock" value="Yes" class="checkbox" /><br /><br /> <!-- is the apartment on whitelock -->
-					<li><label for="condition">Condition</label>Bad<input type="range" id="condition" />Good<br /><br /> <!-- the condition of apartment on a bad to good scale -->
+					<li><label for="condition">Condition<span id="range">50</span><br /></label>Bad<input type="range" id="condition" step="5" onchange="showValue(this.value)"/>Good</li><br /><br /> <!-- the condition of apartment on a bad to good scale -->
+					<script type="text/javascript">
+                    	function showValue(newValue) {
+							document.getElementById("range").innerHTML=newValue;
+						}
+                     </script>
 					<li><label for="comments">Additional Comments:</label><textarea id="comments"></textarea> <!-- add aditional comments field -->
 				</ul>
 			</fieldset><!-- end of apartment info field -->
 		</form>
-		<input type="submit" value="Submit Apartment" id="submit" /><br /><br /><!-- submit button to submit the data into the database -->
+		<input type="submit" value="Submit Apartment" id="submit" /><br /><br /><!-- submit button to submit the data into the database. I would like to add onClick="document.location.reload()" to this button but my validation will not work.-->
 			<nav>
 				<ul>
 					<li><a href="#" id="displayLink">Display Apartments</a></li><!-- links to clear stored data and to display data in database -->

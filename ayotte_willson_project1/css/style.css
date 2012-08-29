@@ -23,10 +23,11 @@ h1 {
     color: lightblue;
     font-size: 145%;/*font size in percent*/
     text-shadow: 2px 2px #000000;
+    text-align: center;
     border-radius: 10px;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
-    padding: 20px;/*how much space around text on all sides*/
+    padding: 10px;/*how much space around text on all sides*/
     margin: -25px -24px 25px -24px; /*(x)top , (x)left , (x)bottom , (x)right*/
     
 }
@@ -34,13 +35,12 @@ h1 {
 h2 {
     background: -webkit-gradient(linear, left top, right bottom, from(#0b88cb), to(#004068));
     color: lightblue;
-    font-size: 145%;/*font size in percent*/
+    font-size: 125%;/*font size in percent*/
     text-shadow: 2px 2px #000000;
+    text-align: center;
     border-radius: 10px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    padding: 20px;/*how much space around text on all sides*/
-    margin: 45px -24px 25px -24px; /*(x)top , (x)right , (x)bottom , (x)left*/
+    padding: 10px;/*how much space around text on all sides*/
+    margin: 20px -0px 25px -5px; /*(x)top , (x)right , (x)bottom , (x)left*/
 }
 
 p {
@@ -49,17 +49,51 @@ p {
     text-align: center;
 }
 
+#p1{
+    color:red;
+    font-size: 22px;
+    position:relative;
+    left: 33px;
+    bottom: 115px;
+}
+
+#search{
+    margin-top: -100px;
+    margin-bottom: 20px;
+    position:relative;
+    bottom: -7px;
+}
+
+/*secound page*/
 span{
    color: red;
 }
 
+/*secound page*/
+#range { 
+  position: center;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#444444), to(#999999));
+  background-image: -webkit-linear-gradient(top, #444444, #999999);
+  width: 40px; 
+  height: 30px; 
+  text-align: center; 
+  color: white; 
+  border-radius: 10px; 
+  display: inline-block; 
+  font: bold 15px/30px Georgia;
+  bottom: 175%;
+  left: 0;
+  margin-left: 10px;
+}
 
+/*secound page*/
 #apartmentFieldset{
     background-color: lightgrey;
     border-radius: 10px;
 
 }
 
+/*secound page*/
 legend{
     background: -webkit-gradient(linear, left top, right bottom, from(#0b88cb), to(#004068));
     color: lightblue;
@@ -78,11 +112,13 @@ li {
     margin-left: -40px;
 }
 
+/*secound page*/
 label {
     display: block;
     color: black;
 }
 
+/*secound page*/
 select {
     font-size: 14px;
 }
@@ -92,25 +128,31 @@ input {
     width: 200px;
 }
 
+
+
 input:focus, 
 textarea:focus, 
 #date:focus {
 background-color: gold;
 }
 
+/*secound page*/
 #aptType{
     width: 215px;
 }
 
+/*secound page*/
 #condition{
     width: 145px;
 }
 
+/*secound page*/
 textarea {
     font-size: 14px;
     width: 210px;
     height: 100px;
 }
+
 
 div {
     background: -webkit-gradient(linear, left top, right bottom, from(white), to(white));
@@ -133,19 +175,63 @@ nav {
     text-align: center;   
 }
 
+div.container {
+background: #d3d3d3;
+text-shadow: 1px 1px #000000;
+}
+
+div.browseApartments {
+    background :#d3d3d3;
+    width:250px; 
+    height:245px;
+}
+
+/*secound page*/
 .errormsg{
     color: red;
 }
 
-a:link{color:blue;}
-a:visited{color:purple;}
+#link1{
+    background: -webkit-gradient(linear, center top, center bottom, from(#0b88cb), to(#004068));
+    width: 120px;
+    height: 35px;
+    font-weight: bold;
+    font: 40px;
+    letter-spacing: 2px;
+    color: lightblue;
+    text-shadow: 2px 2px #000000;
+    border-radius: 10px;
+    box-shadow: 
+    0 1px 2px #fff, 
+    0 -1px 1px #666, 
+    inset 0 -1px 1px rgba(0,0,0,0.5), 
+    inset 0 1px 1px rgba(255,255,255,0.8);
+    position:relative;
+    left: 100px;
+    bottom: 125px;
+}
 
-#copyWright{color:lightblue;}
+ul button {
+    background: -webkit-gradient(linear, center top, center bottom, from(#0b88cb), to(#004068));
+    /*width: 0px;*/
+    padding: 0px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: lightblue;
+    text-shadow: 2px 2px #000000;
+    border-radius: 10px;
+    box-shadow: 
+    0 1px 2px #fff, 
+    0 -1px 1px #666, 
+    inset 0 -1px 1px rgba(0,0,0,0.5), 
+    inset 0 1px 1px rgba(255,255,255,0.8);
+    /*position:relative;
+    left:-38px;
+    bottom:10px;*/
+}
 
-
-/*found this nice button tutorial on a webpage that explained why the last line in this button style was used. 
-Because if it wasnt used the button would not change style at all and mobile Safari will change the appearance 
-of buttons & controls to resemble a native Apple control*/
+/*Submit the infromation in the data fields.*//*Secound Page.*/
 input[type="submit"] {
     background: -webkit-gradient(linear, center top, center bottom, from(#0b88cb), to(#004068));
     width: 255px;
@@ -156,12 +242,31 @@ input[type="submit"] {
     color: lightblue;
     text-shadow: 2px 2px #000000;
     border-radius: 10px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -webkit-appearance: none;
     box-shadow: 
     0 1px 2px #fff, 
     0 -1px 1px #666, 
     inset 0 -1px 1px rgba(0,0,0,0.5), 
     inset 0 1px 1px rgba(255,255,255,0.8); 
 }
+
+/*Search Submit Button*//*First Page*/
+input[type="button"] {
+    background: -webkit-gradient(linear, center top, center bottom, from(#0b88cb), to(#004068));
+    width: 100px;
+    height: 30px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: lightblue;
+    text-shadow: 2px 2px #000000;
+    border-radius: 10px;
+    box-shadow: 
+    0 1px 2px #fff, 
+    0 -1px 1px #666, 
+    inset 0 -1px 1px rgba(0,0,0,0.5), 
+    inset 0 1px 1px rgba(255,255,255,0.8); 
+}
+
+/*copywrite*//*secound page*/
+#copyWright{color:lightblue;}
