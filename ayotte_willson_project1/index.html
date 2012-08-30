@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- Name:  Willson Ayotte -->
+<!-- Date: Aug 30th 2012 -->
+<!-- MIU 1209 -->
+<!-- Application for tracking apartments that are vacant. -->
+<html>
+	<head>
+		<meta charset="utf-8" /> <!-- type of charset -->
+		<meta name="description" content="Branding page, to add apartments to be maintenanced." /> <!-- A description of what this application is about. -->
+		<meta name="robots" content="index, follow" /> <!-- Allowed for search engines to find content on page. -->
+		<meta name="viewport" content="user-scalable=no, width=device-width" /> <!-- For iPhone viewing -->
+		<meta name="viewport" content="target-densitydpi=device-dpi" /> <!-- For android phones. -->
+		<meta name="HandheldFriendly" content="True" /> <!-- For older phones that are not so smart. -->
+		<meta name="MobileOptimized" content="320" /> <!-- For older phones that are not so smart. -->
+		<title>Apartment Tracker</title> <!-- title of page, shows in a tab or head of browser -->
+		<link rel="stylesheet" type="text/css" href="css/style.css"> <!-- Importing the style sheet -->
+	</head>
+	<body>
+		<header>
+			<h1>Apartment Tracker</h1>
+		<div class="container" id="container">
+			<img class="image" src="img/maint.png" id="maint"/>
+			<p id="p1">What needs fixing?<p>
+			<form style="display: inline" action="additem.html" method="get">
+  			<button id="addApt">Add an Apartment</button>
+			</form>
+			<form name="search" id="searchBtn" action="#" method="post">
+				<input type="text" placeholder="Search" class="search" id="searchBox"/>
+				<input type="button" value="Search" id="searchBtn"/>
+			</form>
+		</div>
+		</header>
+		<div class="browseApartments">
+		<h2>Browse Apartment Type</h2>
+			<ul>
+				<button href="#" id="link2">Vacant Available</button>
+				<button href="#" id="link3">Vacant Rented</button>
+				<button href="#" id="link4">Notice Available</button>
+			</ul>
+		</div>
+	</body>
+</html>

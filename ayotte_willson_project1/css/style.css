@@ -1,0 +1,277 @@
+/*Name: Willson Ayotte
+Date: Aug 30th, 2012
+Document: CSS for Apartment Application
+Decription: For MIU 1209
+*/
+
+html {
+    background-color: darkblue;
+}
+body {
+    font-family: "Lucida Grande", "Arial", sans-serif;
+    margin: 10px auto;
+    padding: 24px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ccc), to(#000));
+    color: #4D4B39;
+    max-width: 260px;
+    border: 8px solid lightblue;
+    line-height: 20px;
+}
+
+/*Main Headline for Application.*//*First Page.*/
+h1 {
+    background: -webkit-gradient(linear, left top, right bottom, from(#0b88cb), to(#004068));
+    color: white;
+    font-size: 145%;/*font size in percent*/
+    text-shadow: 2px 2px #000000;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;/*how much space around text on all sides*/
+    margin: -25px -24px 25px -24px; /*(x)top , (x)left , (x)bottom , (x)right*/
+    
+}
+
+/*The Browse Apartment Title to the section.*//*First Page.*/
+h2 {
+    background: -webkit-gradient(linear, left top, right bottom, from(#0b88cb), to(#004068));
+    color: white;
+    font-size: 125%;/*font size in percent*/
+    text-shadow: 2px 2px #000000;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;/*how much space around text on all sides*/
+    margin: 20px 0px 0px -5px; /*(x)top , (x)right , (x)bottom , (x)left*/
+}
+
+/*The "What needs fixing?"" text.*//*First Page.*/
+#p1 {
+    color:red;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 100px;
+    position:relative;
+    bottom: 115px;
+}
+
+/*The search field.*//*First Page.*/
+#searchBox {
+    width: 230px;
+}
+
+/*The actual seach button.*//*First Page.*/
+#searchBtn {
+    margin-top: -130px;
+    margin-bottom: 20px;
+    width: 100px;
+    position:relative;
+    bottom: -7px;
+}
+
+/*Error messages that show up.*//*secound page*/
+span{
+   color: red;
+}
+
+/*The range counter to show the value of the slide bar.*//*secound page*/
+#range { 
+  position: center;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#444444), to(#999999));
+  background-image: -webkit-linear-gradient(top, #444444, #999999);
+  width: 40px; 
+  height: 30px; 
+  text-align: center; 
+  color: white; 
+  border-radius: 10px; 
+  display: inline-block; 
+  font: bold 15px/30px Lucida Grande;
+  bottom: 175%;
+  left: 0;
+  margin-left: 10px;
+}
+
+/*Main fieldset background*//*secound page*/
+#apartmentFieldset{
+    background-color: lightgrey;
+    border-radius: 10px;
+
+}
+
+/*Main forum field title section.*//*secound page*/
+legend{
+    background: -webkit-gradient(linear, left top, right bottom, from(#0b88cb), to(#004068));
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    text-shadow: 2px 2px #000000;
+    border-radius: 5px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin-left: -40px;
+}
+
+/*secound page*/
+label {
+    display: block;
+    color: black;
+}
+
+/*secound page*/
+select {
+    font-size: 14px;
+}
+
+input {
+    font-size: 14px;
+    width: 200px;
+}
+
+input:focus, 
+textarea:focus, 
+#date:focus {
+background-color: gold;
+}
+
+/*How wide the drop down menu for what Aparment Type Selection.*//*secound page*/
+#aptType{
+    width: 215px;
+}
+
+/*How wide the actual slide bar is.*//*secound page*/
+#condition{
+    width: 145px;
+}
+
+/*The text area for the comment box.*//*Secound Page*/
+textarea {
+    font-size: 14px;
+    width: 210px;
+    height: 100px;
+}
+
+/*The background to the Data displayed from Local Storage.*//*Third Page.*/
+div {
+    background: -webkit-gradient(linear, left top, right bottom, from(white), to(white));
+    border-radius: 10px;
+    padding-left: 5px;
+}
+
+/*Deviding line between local storage data.*//*Third Page.*/
+div ul {
+    border-bottom: solid black 1px;
+    /*Play with this<<<<<<<<<<<<<<<<<<<<<<<<<*/
+}
+
+/*The items that are save into Local Storage.*//*Third Page.*/
+#items{
+    color: #004068;
+}
+
+
+nav {
+    display: inline;
+    text-align: center;   
+}
+
+div.container {
+background: #d3d3d3;
+text-shadow: 1px 1px #000000;
+}
+
+div.browseApartments {
+    background:transparent; /* transparent or  #d3d3d3 */
+    margin-left: -24px;
+    width:299px; 
+    height:176px;
+}
+
+/*Error messages when adaquit data is not inserted in form fields.*//*secound page*/
+.errormsg{
+    color: red;
+}
+
+/*Add an Apartment Button*//*First Page*/
+#addApt{
+    background: -webkit-gradient(linear, center top, center bottom, from(#0b88cb), to(#004068));
+    width: 120px;
+    height: 35px;
+    margin-left: 115px;
+    font-weight: bold;
+    font: 40px;
+    letter-spacing: 2px;
+    color: lightblue;
+    text-shadow: 2px 2px #000000;
+    border-radius: 10px;
+    box-shadow: 
+    0 1px 2px #fff, 
+    0 -1px 1px #666, 
+    inset 0 -1px 1px rgba(0,0,0,0.5), 
+    inset 0 1px 1px rgba(255,255,255,0.8);
+    position:relative;
+    bottom: 132px;
+}
+
+/*Browse apartment type buttons.*//*First Page.*/
+ul button {
+    background: -webkit-gradient(linear, center top, center bottom, from(#0b88cb), to(#004068));
+    width: 304px;
+    padding: 5px;
+    margin-left: -45px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: lightblue;
+    text-shadow: 2px 2px #000000;
+    border-radius: 10px;
+    box-shadow: 
+    0 1px 2px #fff, 
+    0 -1px 1px #666, 
+    inset 0 -1px 1px rgba(0,0,0,0.5), 
+    inset 0 1px 1px rgba(255,255,255,0.8);
+}
+
+/*Submit the infromation in the data fields.*//*Secound Page.*/
+input[type="submit"] {
+    background: -webkit-gradient(linear, center top, center bottom, from(#0b88cb), to(#004068));
+    width: 255px;
+    padding: 9px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: lightblue;
+    text-shadow: 2px 2px #000000;
+    border-radius: 10px;
+    box-shadow: 
+    0 1px 2px #fff, 
+    0 -1px 1px #666, 
+    inset 0 -1px 1px rgba(0,0,0,0.5), 
+    inset 0 1px 1px rgba(255,255,255,0.8); 
+}
+
+/*Search Submit Button*//*First Page*/
+input[type="button"] {
+    background: -webkit-gradient(linear, center top, center bottom, from(#0b88cb), to(#004068));
+    width: 100px;
+    height: 30px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: lightblue;
+    text-shadow: 2px 2px #000000;
+    border-radius: 10px;
+    box-shadow: 
+    0 1px 2px #fff, 
+    0 -1px 1px #666, 
+    inset 0 -1px 1px rgba(0,0,0,0.5), 
+    inset 0 1px 1px rgba(255,255,255,0.8); 
+}
+
+/*copywrite*//*secound page*/
+#copyWright{color:lightblue;}
