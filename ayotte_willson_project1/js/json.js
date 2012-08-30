@@ -1,6 +1,6 @@
 // Name: Willson Ayotte
 // Subject: JSON file used to keep data in local storage for testing.
-// Date: Aug. 19, 2012
+// Date: Aug. 30th 2012
 // Decription: This is for testing purposes only and is not to be used when the project is in
 // final stage, and ready for production.
 

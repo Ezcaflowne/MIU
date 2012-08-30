@@ -1,6 +1,6 @@
 // Name: Willson Ayotte
-// Date: Aug 23th 2012
-// Document: Project 4 VFW 1208 
+// Date: Aug 30th 2012
+// Document: Project 1 MIU 1209 
 // Description: Data base for saved data, get data, and clear data. CRUD
 
 window.addEventListener("DOMContentLoaded", function(){
