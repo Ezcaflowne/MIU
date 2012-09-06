@@ -6,7 +6,7 @@
 window.addEventListener("DOMContentLoaded", function(){
 
     //getElementById Function
-    function $ (x) {
+    function ge (x) {
         var theElement = document.getElementById(x);
         return theElement;
     }
@@ -14,7 +14,7 @@ window.addEventListener("DOMContentLoaded", function(){
     //Crate slect field element and populate it with options
     function getType () {
         var formTag = document.getElementsByTagName('form'), //This is an Array because we used get tag name
-            selectLi = $('select'),
+            selectLi = ge('select'),
             makeSelect = document.createElement('select');
             makeSelect.setAttribute("id", "aptType");
             for (var i=0, j=aptStatus.length; i<j; i++) {
@@ -27,18 +27,44 @@ window.addEventListener("DOMContentLoaded", function(){
             selectLi.appendChild(makeSelect);
     }
 
+        //Search
+    var search = ge('searchBtn');
+    search.addEventListener("click", getSearch);
+
+    function getSearch () {
+        
+        var term = ge('search').value;
+
+        
+        // Search by Term Only
+        if(term != /^\d+$/){
+            for(i=0, j=localStorage.length; i<j; i++){
+                var key = localStorage.key(i);
+                var value = localStorage.getItem(key);
+                var obj = JSON.parse(value);
+                for(n in obj){
+                    if(term === obj[n][1]){
+                        for(q in obj){
+                            console.log(obj[q][1]);
+                        }
+                    }
+                }
+            }
+        }
+    };
+
     //Find of selected checkbox
     function getCheckboxPower () {
-        if($('isPower').checked){
-            isPowerValue = $('isPower').value;
+        if(ge('isPower').checked){
+            isPowerValue = ge('isPower').value;
         } else {
             isPowerValue = "No";
         }
     }
 
     function getCheckboxWhite () {
-        if($('isWhiteLock').checked){
-            isWhitelockValue = $('isWhiteLock').value;
+        if(ge('isWhiteLock').checked){
+            isWhitelockValue = ge('isWhiteLock').value;
         } else {
             isWhitelockValue = "No";
         }
@@ -47,20 +73,20 @@ window.addEventListener("DOMContentLoaded", function(){
     function toggleControls(n) {
         switch(n) {
             case "on":
-                $('apartmentForm').style.display = "none";
-                $('clearLink').style.display = "inline";
-                $('displayLink').style.display = "none";
-                $('addNew').style.display = "inline";
-                $('submit').style.display = "none";
-                $('copyWright').style.display = "none";
+                ge('apartmentForm').style.display = "none";
+                ge('clearLink').style.display = "inline";
+                ge('displayLink').style.display = "none";
+                ge('addNew').style.display = "inline";
+                ge('submit').style.display = "none";
+                ge('copyWright').style.display = "none";
                 break;
             case "off":
-                $('apartmentForm').style.display = "block";
-                $('clearLink').style.display = "inline";
-                $('displayLink').style.display = "inline";
-                $('addNew').style.display = "none";
-                $('items').style.display = "none";
-                $('submit').style.display = "inline";
+                ge('apartmentForm').style.display = "block";
+                ge('clearLink').style.display = "inline";
+                ge('displayLink').style.display = "inline";
+                ge('addNew').style.display = "none";
+                ge('items').style.display = "none";
+                ge('submit').style.display = "inline";
                 break;
             default:
                 return false;
@@ -84,15 +110,15 @@ window.addEventListener("DOMContentLoaded", function(){
         getCheckboxPower();
         getCheckboxWhite();
         var item                = {};
-            item.aptType        = ["Apartment Type:", $("aptType").value];
-            item.aptNum         = ["Apartment Number:", $("aptNum").value];
-            item.aptSize        = ["Apartment Size:", $("aptSize").value];
-            item.vacDate        = ["Vacate:", $("vacDate").value];
-            item.rdyDate        = ["Ready:", $("rdyDate").value];
+            item.aptType        = ["Apartment Type:", ge("aptType").value];
+            item.aptNum         = ["Apartment Number:", ge("aptNum").value];
+            item.aptSize        = ["Apartment Size:", ge("aptSize").value];
+            item.vacDate        = ["Vacate:", ge("vacDate").value];
+            item.rdyDate        = ["Ready:", ge("rdyDate").value];
             item.isPower        = ["Power?", isPowerValue];
             item.isWhiteLock    = ["Whitelock?", isWhitelockValue];
-            item.condition      = ["Condition:", $("condition").value];
-            item.comments       = ["Additional Comments:", $("comments").value];
+            item.condition      = ["Condition:", ge("condition").value];
+            item.comments       = ["Additional Comments:", ge("comments").value];
         // Save data into localStorage: Use Stringify to convert our object to a string.
         localStorage.setItem(id, JSON.stringify(item));
         alert("Apartment is Saved!");
@@ -111,7 +137,7 @@ window.addEventListener("DOMContentLoaded", function(){
         var makeList = document.createElement('ul');
         makeDiv.appendChild(makeList);
         document.body.appendChild(makeDiv);
-        $('items').style.display = "block";
+        ge('items').style.display = "block";
         for(var i=0, len=localStorage.length; i<len;i++){
             var makeli = document.createElement('li');
             var linksLi = document.createElement('li');
@@ -189,25 +215,25 @@ window.addEventListener("DOMContentLoaded", function(){
         toggleControls("off");
 
         // popluate the form feilds with current localStorage values.
-        $('aptType').value  = item.aptType[1];
-        $('aptNum').value   = item.aptNum[1];
-        $('aptSize').value  = item.aptSize[1];
-        $('vacDate').value  = item.vacDate[1];
-        $('rdyDate').value  = item.rdyDate[1];
+        ge('aptType').value  = item.aptType[1];
+        ge('aptNum').value   = item.aptNum[1];
+        ge('aptSize').value  = item.aptSize[1];
+        ge('vacDate').value  = item.vacDate[1];
+        ge('rdyDate').value  = item.rdyDate[1];
         if(item.isPower[1] == "Yes"){
-            $('isPower').setAttribute("checked", "checked");
+            ge('isPower').setAttribute("checked", "checked");
         }
         if(item.isWhiteLock[1] == "Yes"){
-            $('isWhiteLock').setAttribute("checked", "checked");
+            ge('isWhiteLock').setAttribute("checked", "checked");
         }
-        $('condition').value = item.condition[1];
-        $('comments').value  = item.comments[1];
+        ge('condition').value = item.condition[1];
+        ge('comments').value  = item.comments[1];
 
         // Remove the initial listener from the input 'save contact' button.
         save.removeEventListener("click", storeData);
         // Change Submit Button value to Confirm Button
-        $('submit').value = "Confirm Changes";
-        var editSubmit = $('submit');
+        ge('submit').value = "Confirm Changes";
+        var editSubmit = ge('submit');
         // Save the key value established in this function as a property of the editSubmit event
         // so we can use that value when we save the data we edited.
         editSubmit.addEventListener("click", validate);
@@ -239,9 +265,9 @@ window.addEventListener("DOMContentLoaded", function(){
 
     function validate (event) {
         // Define elements we want to check
-        var getType = $('aptType');
-        var getNum  = $('aptNum');
-        var getSize = $('aptSize');
+        var getType = ge('aptType');
+        var getNum  = ge('aptNum');
+        var getSize = ge('aptSize');
 
         // Reset Error Messages
         errMsg.innerHTML = "";
@@ -297,16 +323,16 @@ window.addEventListener("DOMContentLoaded", function(){
     var aptStatus = ["--Apartment Type--", "Vacant Available", "Vacant Rented", "Notice Availible"],
         isPowerValue = "No",
         isWhitelockValue = "No",
-        errMsg = $('errors');
+        errMsg = ge('errors');
     ;
     getType();
 
     //Set Link & Submit Click Events
-    var clearLink = $('clearLink');
+    var clearLink = ge('clearLink');
     clearLink.addEventListener("click", clearLocal);
-    var displayLink = $('displayLink');
+    var displayLink = ge('displayLink');
     displayLink.addEventListener("click", getData);
-    var save = $('submit');
+    var save = ge('submit');
     save.addEventListener("click", validate);
 
 
