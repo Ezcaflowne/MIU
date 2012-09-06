@@ -1,0 +1,193 @@
+/*Name: Willson Ayotte
+Date: Aug 30th, 2012
+Document: CSS for Apartment Application
+Decription: For MIU 1209
+*/
+
+html{
+  background-color: darkgrey;
+}
+
+#headline{
+  font-family: "Lucida Grande", "Arial", sans-serif;
+  font-size: 30px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+body {
+    font-family: "Lucida Grande", "Arial", sans-serif;
+    margin: 10px auto;
+    padding: 24px;
+    color: #4D4B39;
+    max-width: 260px;
+    line-height: 20px;
+}
+
+#home{
+  background-color: blue;
+}
+
+
+/*Error messages that show up.*//*secound page*/
+span1{
+   color: red;
+}
+
+/*The range counter to show the value of the slide bar.*//*secound page*/
+#range { 
+  position: center;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#444444), to(#999999));
+  background-image: -webkit-linear-gradient(top, #444444, #999999);
+  width: 40px; 
+  height: 30px; 
+  text-align: center; 
+  color: white; 
+  border-radius: 10px; 
+  display: inline-block; 
+  font: bold 15px/30px Lucida Grande;
+  bottom: 175%;
+  left: 0;
+  margin-left: 10px;
+}
+
+/*Main fieldset background*//*secound page*/
+#apartmentFieldset{
+    background-color: lightgrey;
+    border-radius: 10px;
+}
+
+#searchFieldset{
+    background-color: lightgrey;
+    border-radius: 10px;
+}
+
+#searchhead{
+  font-weight: bold;
+}
+
+#searchBtn{
+  width: 255px;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/*Main forum field title section.*//*secound page*/
+h4{
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin-left: -40px;
+}
+
+/*secound page*/
+label {
+    display: block;
+}
+
+/*secound page*/
+select {
+    font-size: 15px;
+}
+
+input {
+    font-size: 15px;
+    width: 200px;
+}
+
+input:focus, 
+textarea:focus, 
+#date:focus {
+background-color: gold;
+}
+
+/*How wide the drop down menu for what Aparment Type Selection.*//*secound page*/
+#aptType{
+    width: 215px;
+}
+
+/*How wide the actual slide bar is.*//*secound page*/
+#condition{
+    width: 145px;
+}
+
+/*The text area for the comment box.*//*Secound Page*/
+textarea {
+    font-size: 14px;
+    width: 210px;
+    height: 100px;
+}
+
+/*Deviding line between local storage data.*//*Third Page.*/
+div ul {
+    background-color: white;
+    border-radius: 10px;
+    margin: 5px;
+    border-bottom: solid black 2px;
+    /*Play with this<<<<<<<<<<<<<<<<<<<<<<<<<*/
+}
+
+/*The items that are save into Local Storage.*//*Third Page.*/
+#items{
+    color: #004068;
+}
+
+
+nav {
+    display: inline;
+    text-align: center;   
+}
+
+/*Error messages when adaquit data is not inserted in form fields.*//*secound page*/
+.errormsg{
+    color: red;
+}
+
+
+/*Submit the infromation in the data fields.*//*Secound Page.*/
+input[type="submit"] {
+    width: 255px;
+    padding: 9px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+#navFieldset{
+  background-color: lightgrey;
+  border-radius: 10px;
+}
+
+#displayLink{
+  width: 200px;
+  padding: 9px;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+#clearLink{
+  width: 200px;
+  padding: 9px;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+#addNew{
+  width: 200px;
+  padding: 9px;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+/*copywrite*//*secound page*/
+#copyWright{color:blue;}
