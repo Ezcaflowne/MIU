@@ -12,7 +12,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<!-- Mobile IE needs ClearType for smoothing fonts -->
-	<meta http-equiv="cleartype" content="on">
+	<!-- <meta http-equiv="cleartype" content="on"> -->
 	
 	<!-- StyleSheets under here -->
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
@@ -42,24 +42,29 @@
 			<p><a href="addItem.html" data-ajax="false" data-role="button" data-icon="arrow-r" data-iconpos="right">Add Apartment</a></p>
 
 			<ul data-role="listview" data-inset="true" data-filter="true">
-				<li data-role="list-divider" >Browse By Apartment...</li>
-			<li><a href="#va">
-				<h3>Vacant Available</h3>
-				</a></li>
-			<li><a href="#vr">
-				<h3>Vacant Rented</h3>
-				</a></li>
-			<li><a href="#na" >
-				<h3>Notice Available</h3>
-				</a></li>
+				<li data-role="list-divider">Browse By Apartment</li>
+				<li>
+				<div class="ui-grid-b">
+				<div class="ui-block-a"><img src="img/Vacant Available.png"><a href="#vab">Vacant Available</a></div>
+				<div class="ui-block-b"><img src="img/Vacant Rented.png"><a href="#vrb">Vacant Rented</a></div>
+				<div class="ui-block-c"><img src="img/Notice Available.png"><a href="#nab">Notice Available</a></div>
+				</div><!-- /grid-b -->
+				</li>
 			</ul>
 		</div>
+
+				
+
+
+
+
 
 		<div data-role="footer" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#bronze">Home</a></li>
-					<li><a href="#superb">Supervisor</a></li>
+					<li><a href="#superb">Super</a></li>
+					<li><a href="#newsb">News</a></li>
 					<li><a href="#aboutb">About</a></li>
 				</ul>
 			</div>
@@ -70,7 +75,7 @@
 
 
 <!-- Vacant Available Page -->
-	<div data-role="page" id="va" data-add-back-btn="true">
+	<div data-role="page" id="vab" data-add-back-btn="true">
 
 		<div data-role="header" data-position="fixed" data-theme="d">
 			<h1>Vacant Available</h1>
@@ -89,7 +94,8 @@
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#bronze">Home</a></li>
-					<li><a href="#superb">Supervisor</a></li>
+					<li><a href="#superb">Super</a></li>
+					<li><a href="#newsb">News</a></li>
 					<li><a href="#aboutb">About</a></li>
 				</ul>
 			</div>
@@ -100,7 +106,7 @@
 
 
 <!-- Vacant Rented Page -->
-	<div data-role="page" id="vr" data-add-back-btn="true">
+	<div data-role="page" id="vrb" data-add-back-btn="true">
 
 		<div data-role="header" data-position="fixed" data-theme="d">
 			<h1>Vacant Rented</h1>
@@ -119,7 +125,8 @@
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#bronze">Home</a></li>
-					<li><a href="#superb">Supervisor</a></li>
+					<li><a href="#superb">Super</a></li>
+					<li><a href="#newsb">News</a></li>
 					<li><a href="#aboutb">About</a></li>
 				</ul>
 			</div>
@@ -131,7 +138,7 @@
 
 
 <!-- Notice Available Page -->
-	<div data-role="page" id="na" data-add-back-btn="true">
+	<div data-role="page" id="nab" data-add-back-btn="true">
 
 		<div data-role="header" data-position="fixed" data-theme="d">
 			<h1>Notice Available</h1>
@@ -150,7 +157,8 @@
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#bronze">Home</a></li>
-					<li><a href="#superb">Supervisor</a></li>
+					<li><a href="#superb">Super</a></li>
+					<li><a href="#newsb">News</a></li>
 					<li><a href="#aboutb">About</a></li>
 				</ul>
 			</div>
@@ -191,11 +199,6 @@
 				</div><!-- /grid-b -->
 				</li>
 			</ul>
-
-
-			
-
-
 		</div>
 
 
@@ -205,7 +208,8 @@
 				
 				<ul>
 					<li><a href="#bronze">Home</a></li>
-					<li><a href="#superb">Supervisor</a></li>
+					<li><a href="#superb">Super</a></li>
+					<li><a href="#newsb">News</a></li>
 					<li><a href="#aboutb">About</a></li>
 				</ul>
 			</div>
@@ -254,11 +258,36 @@
 				
 				<ul>
 					<li><a href="#bronze">Home</a></li>
-					<li><a href="#superb">Supervisor</a></li>
+					<li><a href="#superb">Super</a></li>
+					<li><a href="#newsb">News</a></li>
 					<li><a href="#aboutb">About</a></li>
 				</ul>
 			</div>
 		</div>
+	</div>
+
+<!-- NewsFeed Page -->
+	<div data-role="page" id="newsb" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h1>News Feed</h1>
+		</div>
+
+		<div data-role="content">
+			<p>This page is for the NewsFeed</p>
+		</div>
+
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#gold">Home</a></li>
+					<li><a href="#superb">Super</a></li>
+					<li><a href="#newsb">News</a></li>
+					<li><a href="#aboutb">About</a></li>
+				</ul>
+			</div>
+		</div>
+
 	</div>
 
 <!-- JavaScript under here -->
