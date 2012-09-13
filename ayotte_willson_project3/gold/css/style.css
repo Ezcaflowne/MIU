@@ -9,3 +9,21 @@ label.error{
 	margin: 10px 0;
 	color:#cc0000;
 }
+
+#apartmenterrorslink{
+	display: none;
+}
+
+ul li {
+	list-style-type: none;
+}
+
+ul {
+	background-color: lightgrey;
+	border-bottom: solid black 1px;
+	padding: 10px;
+}
+
+#addnew{
+	display: none;
+}

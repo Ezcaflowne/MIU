@@ -4,9 +4,21 @@
 		
 $(document).on('pageinit', function(){
 
-		var myForm = $('#apartmentForm');
-		    myForm.validate({
+		var myForm = $('#apartmentForm'),
+            apartmenterrorslink = $('#apartmenterrorslink')
+        ;
+		 
+            myForm.validate({
 			invalidHandler: function(form, validator) {
+                apartmenterrorslink.click();
+                var html = "";
+                for(var key in validator.submitted){
+                    var label = $('label[for^="'+ key +'"]').not('[generated]');
+                    var legend = label.closest('fieldset').find('ui-controlgroup-label');
+                    var fieldName = legend.length ? legend.text() : label.text();
+                    html += '<li>'+ fieldName +'</li>';
+                };
+                $("#apartmentFormErrors p").html(html);
 			},
 			submitHandler: function() {
 		var data = myForm.serializeArray();
@@ -177,16 +189,13 @@ var toggleControls = function (n) {
     switch(n) {
         case "on":
             $('#apartmentForm').toggle("hide");
-            //$('#clearLink').toggle("show");
             $('#displayLink').toggle("hide");
             $('#addNew').removeClass("ui-disabled");
             break;
         case "off":
             $('#apartmentForm').toggle("show");
-            //$('#clearLink').toggle("show");
             $('#displayLink').toggle("show");
-            $('#addNew').addClass("ui-disabled")
-            $('#items').toggle("hide");
+            $('#addNew').addClass("ui-disabled");
             break;
         default:
             return false;
