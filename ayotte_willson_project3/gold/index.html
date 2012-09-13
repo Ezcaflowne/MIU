@@ -27,18 +27,19 @@
 
 
 <!---------------------------------------------- Home Page ------------------------------------------>
-	<div data-role="page" id="gold">
+	<div data-role="page" id="index">
 
 		<div data-role="header">
 			<h1>Gold</h1>
 		</div>
 
 		<div data-role="content">
+			<center>
 			<h1 id="headline">Apartment Tracker</h1>
-			<div style="text-align:center">
+			<div>
 				<img src="img/apartment.png" />
 				<p><a href="#additem" data-ajax="false" data-role="button" data-icon="arrow-r" data-iconpos="right">Add Apartment</a></p>
-
+			</center>
 				<ul data-role="listview" data-inset="true" data-filter="true">
 					<li data-role="list-divider" >Browse by Apartment</li>
 				<li><a href="#vaa">
@@ -60,7 +61,7 @@
 		<div data-role="footer" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#gold">Home</a></li>
+					<li><a href="index.html" data-ajax="flase">Home</a></li>
 					<li><a href="#supera">Super</a></li>
 					<li><a href="http://feeds.weatherbug.com/rss.aspx?zipcode=89142&feed=currtxt,fcsttxt&zcode=z4641">News</a></li>
 					<li><a href="#abouta">About</a></li>
@@ -99,7 +100,7 @@
 		<div data-role="footer" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#gold">Home</a></li>
+					<li><a href="index.html" data-ajax="flase">Home</a></li>
 					<li><a href="#supera">Super</a></li>
 					<li><a href="http://feeds.weatherbug.com/rss.aspx?zipcode=89142&feed=currtxt,fcsttxt&zcode=z4641">News</a></li>
 					<li><a href="#abouta">About</a></li>
@@ -138,7 +139,7 @@
 		<div data-role="footer" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#gold">Home</a></li>
+					<li><a href="index.html" data-ajax="flase">Home</a></li>
 					<li><a href="#supera">Super</a></li>
 					<li><a href="http://feeds.weatherbug.com/rss.aspx?zipcode=89142&feed=currtxt,fcsttxt&zcode=z4641">News</a></li>
 					<li><a href="#abouta">About</a></li>
@@ -176,7 +177,7 @@
 		<div data-role="footer" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#gold">Home</a></li>
+					<li><a href="index.html" data-ajax="flase">Home</a></li>
 					<li><a href="#supera">Super</a></li>
 					<li><a href="http://feeds.weatherbug.com/rss.aspx?zipcode=89142&feed=currtxt,fcsttxt&zcode=z4641">News</a></li>
 					<li><a href="#abouta">About</a></li>
@@ -222,7 +223,7 @@
 			<div data-role="navbar">
 				
 				<ul>
-					<li><a href="#gold">Home</a></li>
+					<li><a href="index.html" data-ajax="flase">Home</a></li>
 					<li><a href="#supera">Super</a></li>
 					<li><a href="http://feeds.weatherbug.com/rss.aspx?zipcode=89142&feed=currtxt,fcsttxt&zcode=z4641">News</a></li>
 					<li><a href="#abouta">About</a></li>
@@ -277,7 +278,7 @@
 			<div data-role="navbar">
 				
 				<ul>
-					<li><a href="#gold">Home</a></li>
+					<li><a href="index.html" data-ajax="flase">Home</a></li>
 					<li><a href="#supera">Super</a></li>
 					<li><a href="http://feeds.weatherbug.com/rss.aspx?zipcode=89142&feed=currtxt,fcsttxt&zcode=z4641">News</a></li>
 					<li><a href="#abouta">About</a></li>
@@ -288,19 +289,21 @@
 
 
 <!--------------------------------------- ADD APARTMENT PAGE ------------------------------------------>
-	<div data-role="page" id="additem" data-add-back-btn="true" >
+<div data-role="page" id="additem" data-add-back-btn="true" >
 	<div data-role="header">
-		<h1>Add Apartments</h1>
+		<h1 id="headline">Apartment Tracker</h1>
+			<div style="text-align:center">
+				<img src="img/apartment.png" />
+			</div>
     </div>
     
     <div data-role="content">
-        	<form action="#" method="post" id="apartmentForm">
+        	<form action="" method="post" id="apartmentForm">
                       <div data-role="fieldcontain" class="formfield">
-                      	<h3>Enter Apartment Information:</h3>
-						<h4> *fields are required.*</h4>
-						<ul class="errormsg" id="errors"></ul>
+                      	<h5>*required fields*</h5>
+                      	<ul class="errormsg" id="errors"></ul>
                 	    <label for="aptType" class="select">*Type:</label>
-                	    <select name="group" id="group" class="required">
+                	    <select name="aptType" id="aptType">
                           <option data-placeholder="true">--Apartment Type--</option>
                 	      <option value="">Vacant Available</option>
                 	      <option value="">Vacant Rented</option>
@@ -309,75 +312,99 @@
               	      </div>
                       
                       <div data-role="fieldcontain" class="formfield">
-                      	<label for="aptNum">*Number:</label>
-                      	<input type="text" name="aptNum" id="aptNum" value="" placeholder="Enter Apartment Number" class="required"/>
+                      	<label for="aptNum">*Number: </label>
+                      	<input type="text" name="aptNum" id="aptNum" value="" placeholder="Enter Apartment Number" class="required number"/>
                       </div>
 
                        <div data-role="fieldcontain" class="formfield">
-                      	<label for="aptSize">*Size:</label>
+                      	<label for="aptSize">*Size: </label>
                       	<input type="text" name="aptSize" id="aptSize" value="" placeholder="bedxbath" class="required"/>
                       </div>
 
                       <div data-role="fieldcontain" class="formfield">
-                      	<label for="vacDate">Vacate Date:</label>
+                      	<label for="vacDate">Vacate Date: </label>
                       	<input type="date" name="vacDate" id="vacDate" placeholder="mm/dd/yy"/>
                       </div>
 
                       <div data-role="fieldcontain" class="formfield">
-                      	<label for="rdyDate">Ready Date:</label>
+                      	<label for="rdyDate">Ready Date: </label>
                       	<input type="date" name="rdyDate" id="rdyDate" placeholder="mm/dd/yy"/>
                       </div>
 
-                      <div data-role="fieldcontain" class="formfield">
-                      	<label for="isPower">Power?</label>
-                      	<input type="checkbox" name="isPower" id="isPower" value="Yes" class="checkbox" />
+                      <div data-role="fieldcontain">
+                      	<label for="isWhiteLock">Is it on White Lock?</label></br>
+                      	<select data-role="slider" id="isWhiteLock">
+                      		<option value="no">No</option>
+                      		<option value="yes">Yes</option>
+                      	</select>
+                      </div>
+
+                      <div data-role="fieldcontain">
+                      	<label for="isPower">Is there Power?</label></br>
+                      	<select data-role="slider" id="isPower">
+                      		<option value="no">No</option>
+                      		<option value="yes">Yes</option>
+                      	</select>
                       </div>
 
                       <div data-role="fieldcontain" class="formfield">
-                      	<label for="isWhiteLock">White Lock?</label>
-                      	<input type="checkbox" name="isWhiteLock" id="isWhiteLock" value="Yes" class="checkbox" />
-                      </div>
-
-                      <div data-role="fieldcontain" class="formfield">
-                      	<label for="condition">Condition:</label>
+                      	<label for="condition">Condition: </label>
                         <input type="range" name="condition" id="condition" value="50" step="5" min="0" max="100" />
                       </div>
                     
                      <div data-role="fieldcontain" class="formfield">
-                    	<label for="comments">Additional Comments:</label>
-                        <textarea id="notes" name="comments" placeholder="Insert additional comments here."></textarea>
+                    	<label for="comments">Additional Comments:</label></br>
+                        <textarea id="comments" name="comments" placeholder="Insert additional comments here."></textarea>
                     </div>
+
                 	<div data-role="fieldcontain">
-					<input type="submit" value="Submit Apartment" id="submit"/>
+					<input type="submit" value="Submit Apartment" id="submit" data-theme="a"/>
                     </div>
-                  
+
+                    <div data-role="fieldcontain">
+					<input type="reset" value="Reset" id="reset" data-theme="b"/>
+                    </div>
+
+                    <a href="#apartmentFormErrors" id="apartmenterrorslink" data-rel="dialog">Open Errors</a>
     </div>
     
-    <div data-role="fieldcontain" id="showData">
-     </div>
+    	<div data-role="fieldcontain" id="showData" class="formfield">
+     	</div>
                     
-      <div data-role="button" id="displayLink" data-inline="true">Display Apartments</div>
-   	  <div data-role="button" id="clearLink"    data-inline="true">Clear Apartments</div>
-      <div data-role="button" id="addNew" data-inline="true" class="ui-disabled">Add New Apartment</div>
+      	<div data-role="button" id="displayLink" data-inline="true">Display Apartments</div>
+   	  	<div data-role="button" id="clearLink"    data-inline="true">Clear Apartments</div>
+      	<div data-role="button" id="addNew" data-inline="true" class="ui-disabled">Add New Apartment</div>
       
-      <div data-role="footer" data-position="fixed">
-    <div data-role="navbar">		
-    	<ul>
-			<li><a href="index.html" data-ajax="false">Home</a></li>
-			<li><a href="#supera">Super</a></li>
-			<li><a href="http://feeds.weatherbug.com/rss.aspx?zipcode=89142&feed=currtxt,fcsttxt&zcode=z4641">News</a></li>
-			<li><a href="#abouta">About</a></li>
-		</ul>
+      	<div data-role="footer" data-position="fixed">
+    		<div data-role="navbar">		
+    			<ul>
+					<li><a href="index.html" data-ajax="flase">Home</a></li>
+					<li><a href="#supera">Super</a></li>
+					<li><a href="http://feeds.weatherbug.com/rss.aspx?zipcode=89142&feed=currtxt,fcsttxt&zcode=z4641">News</a></li>
+					<li><a href="#abouta">About</a></li>
+				</ul>
+			</div>
+		</div>
 	</div>
 
-  </div>
-                    
+<div data-role="dialog" id="apartmentFormErrors">
+
+	<div data-role="header" data-position="fixed">
+		<h1>Some fields were missing</h1>
+	</div>
+
+	<div data-role="content">
+		<ul>
+			<li>Test.</li>
+		</ul>
+	</div>
 </div>
 
 
 <!-- JavaScript under here -->
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+	<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<script type="text/javascript" src="js/JSON.js"></script>
 </body>
