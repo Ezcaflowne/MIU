@@ -26,6 +26,7 @@ $(document).on('pageinit', function(){
 		}
 	});
 	
+    $('.foo').clearable();
 	//any other code needed for addItem page goes here
 	
 });
@@ -60,7 +61,7 @@ var storeData = function (key){
             item.isWhiteLock    = ["Whitelock?", $("#isWhiteLock").val()];
             item.isPower        = ["Power?", $("#isPower").val()];
             item.condition      = ["Condition:", $("#condition").val()];
-            item.comments       = ["Additional Comments", $("#comments").val()];
+            item.comments       = ["Additional Comments:", $("#comments").val()];
         // Save data into localStorage: Use Stringify to convert our object to a string.
         localStorage.setItem(id, JSON.stringify(item));
         alert("Apartment is Saved!");
@@ -179,7 +180,6 @@ var editItem = function () {
         ////editSubmit.addEventListener("click", validate);
         thiskey = this.key;
 };
-
 
 // CORRECT //
 var	deleteItem = function (){
