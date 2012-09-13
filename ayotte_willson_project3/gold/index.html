@@ -16,6 +16,7 @@
 	
 	<!-- StyleSheets under here -->
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+	<link rel="stylesheet" href="css/jquery.clearable.css" type="text/css" media="screen" />
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	
 	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
@@ -71,7 +72,7 @@
 
 
 <!----------------------------------------------- Vacant Available Page ---------------------------------->
-	<div data-role="page" id="vaa" data-add-back-btn="true">
+	<div data-role="page" id="vaa">
 
 		<div data-role="header" data-position="fixed" data-theme="d">
 			<h1>Vacant Available</h1>
@@ -110,7 +111,7 @@
 
 
 <!---------------------------------------- Vacant Rented Page -------------------------------------------->
-	<div data-role="page" id="vra" data-add-back-btn="true">
+	<div data-role="page" id="vra">
 
 		<div data-role="header" data-position="fixed" data-theme="d">
 			<h1>Vacant Rented</h1>
@@ -148,7 +149,7 @@
 
 
 <!-------------------------------------- Notice Available Page -------------------------------------->
-	<div data-role="page" id="naa" data-add-back-btn="true">
+	<div data-role="page" id="naa">
 
 		<div data-role="header" data-position="fixed" data-theme="d">
 			<h1>Notice Available</h1>
@@ -313,12 +314,12 @@
                       
                       <div data-role="fieldcontain" class="formfield">
                       	<label for="aptNum">*Number: </label>
-                      	<input type="text" name="aptNum" id="aptNum" value="" placeholder="Enter Apartment Number" class="required number"/>
+                      	<input type="text" name="aptNum" id="aptNum" value="" placeholder="Enter Apartment Number" class="required number" class="foo"/>
                       </div>
 
                        <div data-role="fieldcontain" class="formfield">
                       	<label for="aptSize">*Size: </label>
-                      	<input type="text" name="aptSize" id="aptSize" value="" placeholder="bedxbath" class="required"/>
+                      	<input type="text" name="aptSize" id="aptSize" value="" placeholder="bedxbath" class="required" class="foo"/>
                       </div>
 
                       <div data-role="fieldcontain">
@@ -354,7 +355,7 @@
                     
                      <div data-role="fieldcontain" class="formfield">
                     	<label for="comments">Additional Comments:</label>
-                        <textarea id="comments" name="comments" placeholder="Insert additional comments here."></textarea>
+                        <textarea id="comments" name="comments" class="foo" placeholder="Insert additional comments here."></textarea>
                     </div>
 
                 	<div data-role="fieldcontain">
@@ -401,6 +402,7 @@
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
 	<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="js/libs/jquery.clearable.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<script type="text/javascript" src="js/JSON.js"></script>
 </body>
