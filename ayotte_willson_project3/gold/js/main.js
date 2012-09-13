@@ -1,34 +1,34 @@
-// $('#home').on('pageinit', function(){
-// 	//code needed for home page goes here
-// });	
+$('#home').on('pageinit', function(){
+	//code needed for home page goes here
+});	
 		
 $(document).on('pageinit', function(){
-
-		var myForm = $('#apartmentForm'),
-            apartmenterrorslink = $('#apartmenterrorslink')
+    delete $.validator.methods.date;
+    var myForm = $('#apartmentForm'),
+        apartmenterrorslink = $('#apartmenterrorslink')
         ;
-		 
-            myForm.validate({
-			invalidHandler: function(form, validator) {
-                apartmenterrorslink.click();
-                var html = "";
-                for(var key in validator.submitted){
-                    var label = $('label[for^="'+ key +'"]').not('[generated]');
-                    var legend = label.closest('fieldset').find('ui-controlgroup-label');
-                    var fieldName = legend.length ? legend.text() : label.text();
-                    html += '<li>'+ fieldName +'</li>';
-                };
-                $("#apartmentFormErrors p").html(html);
-			},
-			submitHandler: function() {
-		var data = myForm.serializeArray();
-			storeData();
-		}
-	});
-	
+
+        myForm.validate({
+        invalidHandler: function(form, validator){
+            apartmenterrorslink.click();
+            var html = "";
+            for(var key in validator.submitted){
+                var label = $('label[for^="'+ key +'"]').not('[generated]');
+                var legend = label.closest('fieldset').find('ui-controlgroup-label');
+                var fieldName = legend.length ? legend.text() : label.text();
+                html += '<li>'+ fieldName +'</li>';
+            };
+            $("#apartmentFormErrors p").html(html);
+        },
+        submitHandler: function(){
+            var data = myForm.serializeArray();
+            storeData();
+            }
+        });
+
     $('.foo').clearable();
-	//any other code needed for addItem page goes here
-	
+    //any other code needed for addItem page goes here
+
 });
 
 var ge = function ( x ){
@@ -127,7 +127,7 @@ var autoFillApartments = function (){
     // Create the edit and delete links for each stored item when displayed.
 var makeItemLinks = function (key, linksLi) {
     // add edit single item link
-        var editLink  = document.createElement('a');
+        var editLink  = document.createElement('button');
         editLink.href = "#";
         editLink.key  = key;
         var editText  = "Edit Apartment";
@@ -140,7 +140,7 @@ var makeItemLinks = function (key, linksLi) {
     linksLi.appendChild(breakTag);
 
     // Add delete single item Link
-        var deleteLink = document.createElement('a');
+        var deleteLink = document.createElement('button');
         deleteLink.href = "#";
         deleteLink.key = key;
         var deleteText = "Delete Apartment";
@@ -229,6 +229,6 @@ var windowReload = function (){
 	return false;
 };
 
-	$( '#displayLink' ).on( 'click', getData );
-	$( '#clearLink'    ).on( 'click', clearLocal );
-	$( '#addNew'      ).on( 'click', windowReload );
+	$( '#displayLink').on( 'click', getData );
+	$( '#clearLink').on( 'click', clearLocal );
+	$( '#addNew').on( 'click', windowReload );
