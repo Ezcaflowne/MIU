@@ -19,11 +19,8 @@ ul li {
 }
 
 ul {
-	background-color: lightgrey;
+	background-color: white;
 	border-bottom: solid black 1px;
 	padding: 10px;
 }
 
-#addnew{
-	display: none;
-}

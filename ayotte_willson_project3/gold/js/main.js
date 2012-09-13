@@ -90,7 +90,7 @@ var getData = function (){
             var obj = JSON.parse(value);
             var makeSubList = document.createElement('ul');
             makeli.appendChild(makeSubList);
-            // getImage(obj.aptType[1], makeSubList);
+            getImage(obj.aptType[1], makeSubList);
             for(var n in obj){
                 var makeSubli = document.createElement('li');
                 makeSubList.appendChild(makeSubli);
@@ -100,6 +100,15 @@ var getData = function (){
             }
             makeItemLinks(localStorage.key(i), linksLi); // Create edit and delete button or links for each item in local storage
         }
+};
+
+    // Get the image for the right category
+var getImage = function (catName, makeSubList) {
+        var imageLi = document.createElement('li');
+        makeSubList.appendChild(imageLi);
+        var newImg = document.createElement('img');
+        var setSrc = newImg.setAttribute("src", "img/"+ catName + ".png");
+        imageLi.appendChild(newImg);
 };
 
 // CORRECT //
