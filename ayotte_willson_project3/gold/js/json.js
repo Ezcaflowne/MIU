@@ -11,8 +11,8 @@ var json = {
 		"aptSize" 		: ["Apartment Size:", "2x2"],
 		"vacDate" 		: ["Vacate:", "8/19/2012"],
 		"rdyDate" 		: ["Ready:", "8/29/2012"],
-		"isPower" 		: ["Power?", "Yes"],
 		"isWhiteLock" 	: ["Whitelock?", "Yes"],
+		"isPower" 		: ["Power?", "Yes"],
 		"condition" 	: ["Condition:", "20"],
 		"comments"		: ["Additional Comments:", "Needs new carpet and vinyl installed."]
 	},
@@ -22,8 +22,8 @@ var json = {
 		"aptSize" 		: ["Apartment Size:", "2x2"],
 		"vacDate" 		: ["Vacate:", "8/9/2012"],
 		"rdyDate" 		: ["Ready:", "8/19/2012"],
-		"isPower" 		: ["Power?", "Yes"],
 		"isWhiteLock" 	: ["Whitelock?", "Yes"],
+		"isPower" 		: ["Power?", "Yes"],
 		"condition" 	: ["Condition:", "100"],
 		"comments"		: ["Additional Comments:", "Countertops have been resurfaced."]
 	},
@@ -33,8 +33,8 @@ var json = {
 		"aptSize" 		: ["Apartment Size:", "1x1"],
 		"vacDate" 		: ["Vacate:", "8/27/2012"],
 		"rdyDate" 		: ["Ready:", ""],
-		"isPower" 		: ["Power?", ""],
 		"isWhiteLock" 	: ["Whitelock?", ""],
+		"isPower" 		: ["Power?", ""],
 		"condition" 	: ["Condition:", "50"],
 		"comments"		: ["Additional Comments:", "Resident would like apartment walked prior to move-out date."]
 	},
@@ -44,8 +44,8 @@ var json = {
 		"aptSize" 		: ["Apartment Size:", "1x1"],
 		"vacDate" 		: ["Vacate:", "9/1/2012"],
 		"rdyDate" 		: ["Ready:", "9/8/2012"],
-		"isPower" 		: ["Power?", "Yes"],
 		"isWhiteLock" 	: ["Whitelock?", "Yes"],
+		"isPower" 		: ["Power?", "Yes"],
 		"condition" 	: ["Condition:", "50"],
 		"comments"		: ["Additional Comments:", "Needs countertops resurfaced."]
 	},"apartment5": {
@@ -54,8 +54,8 @@ var json = {
 		"aptSize" 		: ["Apartment Size:", "1x1"],
 		"vacDate" 		: ["Vacate:", "9/28/2012"],
 		"rdyDate" 		: ["Ready:", ""],
-		"isPower" 		: ["Power?", ""],
 		"isWhiteLock" 	: ["Whitelock?", ""],
+		"isPower" 		: ["Power?", ""],
 		"condition" 	: ["Condition:", "50"],
 		"comments"		: ["Additional Comments:", ""]
 	},"apartment6": {
@@ -64,8 +64,8 @@ var json = {
 		"aptSize" 		: ["Apartment Size:", "2x2"],
 		"vacDate" 		: ["Vacate:", "9/10/2012"],
 		"rdyDate" 		: ["Ready:", "9/22/2012"],
-		"isPower" 		: ["Power?", "Yes"],
 		"isWhiteLock" 	: ["Whitelock?", "Yes"],
+		"isPower" 		: ["Power?", "Yes"],
 		"condition" 	: ["Condition:", "20"],
 		"comments"		: ["Additional Comments:", "Sinks need to be replaced in shared bathroom."]
 	},"apartment7": {
@@ -74,8 +74,8 @@ var json = {
 		"aptSize" 		: ["Apartment Size:", "2x2"],
 		"vacDate" 		: ["Vacate:", "9/1/2012"],
 		"rdyDate" 		: ["Ready:", "9/8/2012"],
-		"isPower" 		: ["Power?", "Yes"],
 		"isWhiteLock" 	: ["Whitelock?", "Yes"],
+		"isPower" 		: ["Power?", "Yes"],
 		"condition" 	: ["Condition:", "40"],
 		"comments"		: ["Additional Comments:", "Heavy carpet clean."]
 	},"apartment8": {
@@ -84,8 +84,8 @@ var json = {
 		"aptSize" 		: ["Apartment Size:", "1x1"],
 		"vacDate" 		: ["Vacate:", "8/27/2012"],
 		"rdyDate" 		: ["Ready:", "9/10/2012"],
-		"isPower" 		: ["Power?", "Yes"],
 		"isWhiteLock" 	: ["Whitelock?", "Yes"],
+		"isPower" 		: ["Power?", "Yes"],
 		"condition" 	: ["Condition:", "75"],
 		"comments"		: ["Additional Comments:", "Dishwasher will need to be replaced with new one."]
 	},"apartment9": {
@@ -94,8 +94,8 @@ var json = {
 		"aptSize" 		: ["Apartment Size:", "2x2"],
 		"vacDate" 		: ["Vacate:", "9/27/2012"],
 		"rdyDate" 		: ["Ready:", "10/2/2012"],
-		"isPower" 		: ["Power?", ""],
 		"isWhiteLock" 	: ["Whitelock?", ""],
+		"isPower" 		: ["Power?", ""],
 		"condition" 	: ["Condition:", "50"],
 		"comments"		: ["Additional Comments:", "This is a transfer and needs to be done ASAP."]
 	},"apartment10": {
@@ -104,8 +104,8 @@ var json = {
 		"aptSize" 		: ["Apartment Size:", "2x2"],
 		"vacDate" 		: ["Vacate:", "9/1/2012"],
 		"rdyDate" 		: ["Ready:", "9/8/2012"],
-		"isPower" 		: ["Power?", ""],
 		"isWhiteLock" 	: ["Whitelock?", "Yes"],
+		"isPower" 		: ["Power?", ""],
 		"condition" 	: ["Condition:", "16"],
 		"comments"		: ["Additional Comments:", "Heavy Paint, Heavy Clean, New Carpet and Vinyl."]
 	},
@@ -115,8 +115,8 @@ var json = {
 		"aptSize" 		: ["Apartment Size:", "1x1"],
 		"vacDate" 		: ["Vacate:", "8/27/2012"],
 		"rdyDate" 		: ["Ready:", "9/7/2012"],
-		"isPower" 		: ["Power?", "Yes"],
 		"isWhiteLock" 	: ["Whitelock?", "Yes"],
+		"isPower" 		: ["Power?", "Yes"],
 		"condition" 	: ["Condition:", "100"],
 		"comments"		: ["Additional Comments:", "Apartment is completed."]
 	},
@@ -126,8 +126,8 @@ var json = {
 		"aptSize" 		: ["Apartment Size:", "2x2"],
 		"vacDate" 		: ["Vacate:", "9/15/2012"],
 		"rdyDate" 		: ["Ready:", ""],
-		"isPower" 		: ["Power?", ""],
 		"isWhiteLock" 	: ["Whitelock?", ""],
+		"isPower" 		: ["Power?", ""],
 		"condition" 	: ["Condition:", "50"],
 		"comments"		: ["Additional Comments:", "Resident would like apartment walked prior to move-out date."]
 	},
@@ -137,8 +137,8 @@ var json = {
 		"aptSize" 		: ["Apartment Size:", "3x2"],
 		"vacDate" 		: ["Vacate:", "9/2/2012"],
 		"rdyDate" 		: ["Ready:", "9/9/2012"],
-		"isPower" 		: ["Power?", "Yes"],
 		"isWhiteLock" 	: ["Whitelock?", "Yes"],
+		"isPower" 		: ["Power?", "Yes"],
 		"condition" 	: ["Condition:", "75"],
 		"comments"		: ["Additional Comments:", "This is a trasnfer, needed ASAP."]
 	},
@@ -148,8 +148,8 @@ var json = {
 		"aptSize" 		: ["Apartment Size:", "3x2"],
 		"vacDate" 		: ["Vacate:", "8/27/2012"],
 		"rdyDate" 		: ["Ready:", "9/14/2012"],
-		"isPower" 		: ["Power?", "Yes"],
 		"isWhiteLock" 	: ["Whitelock?", "Yes"],
+		"isPower" 		: ["Power?", "Yes"],
 		"condition" 	: ["Condition:", "90"],
 		"comments"		: ["Additional Comments:", "Minor maintenance needed."]
 	},
@@ -159,8 +159,8 @@ var json = {
 		"aptSize" 		: ["Apartment Size:", "3x2"],
 		"vacDate" 		: ["Vacate:", "9/30/2012"],
 		"rdyDate" 		: ["Ready:", ""],
-		"isPower" 		: ["Power?", ""],
 		"isWhiteLock" 	: ["Whitelock?", ""],
+		"isPower" 		: ["Power?", ""],
 		"condition" 	: ["Condition:", "50"],
 		"comments"		: ["Additional Comments:", "Resident would like apartment walked prior to transfer."]
 	},
@@ -170,8 +170,8 @@ var json = {
 		"aptSize" 		: ["Apartment Size:", "2x2"],
 		"vacDate" 		: ["Vacate:", "9/3/2012"],
 		"rdyDate" 		: ["Ready:", "9/10/2012"],
-		"isPower" 		: ["Power?", "Yes"],
 		"isWhiteLock" 	: ["Whitelock?", "Yes"],
+		"isPower" 		: ["Power?", "Yes"],
 		"condition" 	: ["Condition:", "50"],
 		"comments"		: ["Additional Comments:", "Apartment needs to be trashed out, alot of things left behind 10 bags plus."]
 	},
@@ -181,8 +181,8 @@ var json = {
 		"aptSize" 		: ["Apartment Size:", "2x2"],
 		"vacDate" 		: ["Vacate:", "8/30/2012"],
 		"rdyDate" 		: ["Ready:", "9/15/2012"],
-		"isPower" 		: ["Power?", "Yes"],
 		"isWhiteLock" 	: ["Whitelock?", "Yes"],
+		"isPower" 		: ["Power?", "Yes"],
 		"condition" 	: ["Condition:", "100"],
 		"comments"		: ["Additional Comments:", "Apartment is completed."]
 	},
@@ -192,8 +192,8 @@ var json = {
 		"aptSize" 		: ["Apartment Size:", "2x2"],
 		"vacDate" 		: ["Vacate:", "8/30/2012"],
 		"rdyDate" 		: ["Ready:", "9/5/2012"],
-		"isPower" 		: ["Power?", "Yes"],
 		"isWhiteLock" 	: ["Whitelock?", "Yes"],
+		"isPower" 		: ["Power?", "Yes"],
 		"condition" 	: ["Condition:", "100"],
 		"comments"		: ["Additional Comments:", "Easy turn."]
 	},
@@ -203,8 +203,8 @@ var json = {
 		"aptSize" 		: ["Apartment Size:", "1x1"],
 		"vacDate" 		: ["Vacate:", "9/3/2012"],
 		"rdyDate" 		: ["Ready:", "9/10/2012"],
-		"isPower" 		: ["Power?", "Yes"],
 		"isWhiteLock" 	: ["Whitelock?", "Yes"],
+		"isPower" 		: ["Power?", "Yes"],
 		"condition" 	: ["Condition:", "100"],
 		"comments"		: ["Additional Comments:", "Apartment is completed."]
 	},
@@ -214,8 +214,8 @@ var json = {
 		"aptSize" 		: ["Apartment Size:", "1x1"],
 		"vacDate" 		: ["Vacate:", "8/30/2012"],
 		"rdyDate" 		: ["Ready:", "9/15/2012"],
-		"isPower" 		: ["Power?", "Yes"],
 		"isWhiteLock" 	: ["Whitelock?", "Yes"],
+		"isPower" 		: ["Power?", "Yes"],
 		"condition" 	: ["Condition:", "100"],
 		"comments"		: ["Additional Comments:", "Apartment is completed."]
 	}

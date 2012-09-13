@@ -4,3 +4,8 @@ Document: CSS for Apartment Application
 Decription: For MIU 1209
 */
 
+label.error{
+	display: block;
+	margin: 10px 0;
+	color:#cc0000;
+}

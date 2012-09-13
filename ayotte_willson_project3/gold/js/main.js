@@ -1,8 +1,8 @@
-$('#home').on('pageinit', function(){
-	//code needed for home page goes here
-});	
+// $('#home').on('pageinit', function(){
+// 	//code needed for home page goes here
+// });	
 		
-$('#addItem').on('pageinit', function(){
+$(document).on('pageinit', function(){
 
 		var myForm = $('#apartmentForm');
 		    myForm.validate({
@@ -10,7 +10,7 @@ $('#addItem').on('pageinit', function(){
 			},
 			submitHandler: function() {
 		var data = myForm.serializeArray();
-			storeData(key);
+			storeData();
 		}
 	});
 	
@@ -21,9 +21,38 @@ $('#addItem').on('pageinit', function(){
 var ge = function ( x ){
 		var theElement = document.getElementById( x );
 		return theElement;
-	}
+};
 //The functions below can go inside or outside the pageinit function for the page in which it is needed.
 
+var storeData = function (key){
+        // If there is not key this means this is a brand new item and need a new key.
+        if(!key){
+            var id              = Math.floor(Math.random()*10000001);    
+        } else {
+            // Set the id to the existing key we are editing so that it will save over the data.
+            // The key is the same key thats been passed along from the editSubmit event handler
+            // to the validate function, and then passed here, into the storeData function.
+            id = key;
+        }
+        
+        // Gather up all our form field values and stred in an object
+        // Object properties contain an array with the form label and input values.
+        // getCheckboxPower();
+        // getCheckboxWhite();
+        var item                = {};
+            item.aptType        = ["Apartment Type:", $("#aptType").val()];
+            item.aptNum         = ["Apartment Number:", $("#aptNum").val()];
+            item.aptSize        = ["Apartment Size:", $("#aptSize").val()];
+            item.vacDate        = ["Vacate:", $("#vacDate").val()];
+            item.rdyDate        = ["Ready:", $("#rdyDate").val()];
+            item.isWhiteLock    = ["Whitelock?", $("#isWhiteLock").val()];
+            item.isPower        = ["Power?", $("#isPower").val()];
+            item.condition      = ["Condition:", $("#condition").val()];
+            item.comments       = ["Additional Comments", $("#comments").val()];
+        // Save data into localStorage: Use Stringify to convert our object to a string.
+        localStorage.setItem(id, JSON.stringify(item));
+        alert("Apartment is Saved!");
+}; 
 
 // CORRECT //
 var getData = function (){
@@ -114,12 +143,8 @@ var editItem = function () {
         $('#aptSize').val(item.aptSize[1]);
         $('#vacDate').val(item.vacDate[1]);
         $('#rdyDate').val(item.rdyDate[1]);
-        //if(item.isPower[1] == "Yes"){
-            //$('#isPower').setAttribute("checked", "checked");
-        //}
-        //if(item.isWhiteLock[1] == "Yes"){
-            //$('#isWhiteLock').setAttribute("checked", "checked");
-        //}
+        $('#isWhiteLock').val(item.isWhiteLock[1]);
+        $('#isPower').val(item.isPower[1]);
         $('#condition').val(item.condition[1]);
         $('#comments').val(item.comments[1]);
 
@@ -136,49 +161,6 @@ var editItem = function () {
 
 
 // CORRECT //
-var deleteItem = function () {
-        var ask = confirm("Are you sure you want to delete this Apartment?");
-        if(ask){
-            localStorage.removeItem(this.key);
-            alert("Apartment was deleted!");
-            window.location.reload();
-        } else {
-            alert("Apartment was not deleted.");
-        }
-};
-
-
-
-var storeData = function (key){
-        // If there is not key this means this is a brand new item and need a new key.
-        if(!key){
-            var id              = Math.floor(Math.random()*10000001);    
-        } else {
-            // Set the id to the existing key we are editing so that it will save over the data.
-            // The key is the same key thats been passed along from the editSubmit event handler
-            // to the validate function, and then passed here, into the storeData function.
-            id = key;
-        }
-        
-        // Gather up all our form field values and stred in an object
-        // Object properties contain an array with the form label and input values.
-        // getCheckboxPower();
-        // getCheckboxWhite();
-        var item                = {};
-            item.aptType        = ["Apartment Type:", $("#aptType").val()];
-            item.aptNum         = ["Apartment Number:", $("#aptNum").val()];
-            item.aptSize        = ["Apartment Size:", $("#aptSize").val()];
-            item.vacDate        = ["Vacate:", $("#vacDate").val()];
-            item.rdyDate        = ["Ready:", $("#rdyDate").val()];
-            // item.isPower        = ["Power?", isPowerValue];
-            // item.isWhiteLock    = ["Whitelock?", isWhitelockValue];
-            item.condition      = ["Condition:", $("#condition").val()];
-            item.comments       = ["Additional Comments:", $("#comments").val()];
-        // Save data into localStorage: Use Stringify to convert our object to a string.
-        localStorage.setItem(id, JSON.stringify(item));
-        alert("Apartment is Saved!");
-}; 
-// CORRECT //
 var	deleteItem = function (){
 	var ask = confirm("Are you sure you want to delete this Apartment?");
         if(ask){
@@ -190,25 +172,28 @@ var	deleteItem = function (){
     }	
 };
 
+
 var toggleControls = function (n) {
     switch(n) {
         case "on":
             $('#apartmentForm').toggle("hide");
-            $('#clearLink').toggle("show");
+            //$('#clearLink').toggle("show");
             $('#displayLink').toggle("hide");
             $('#addNew').removeClass("ui-disabled");
             break;
         case "off":
             $('#apartmentForm').toggle("show");
-            $('#clearLink').toggle("show");
+            //$('#clearLink').toggle("show");
             $('#displayLink').toggle("show");
             $('#addNew').addClass("ui-disabled")
+            $('#items').toggle("hide");
             break;
         default:
             return false;
     }
 };
-					
+	
+// CORRECT //				
 var clearLocal = function(){
 	if(localStorage.length === 0) {
         alert("You have not saved any Apartments to the Database.");
@@ -220,6 +205,7 @@ var clearLocal = function(){
     }
 };
 
+// CORRECT //
 var windowReload = function (){
 	window.location.reload();
 	return false;
