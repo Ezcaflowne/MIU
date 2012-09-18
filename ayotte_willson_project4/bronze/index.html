@@ -1,0 +1,276 @@
+<!doctype html>  <!-- BRONZE -->
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	
+	<title>Apartment Tracker</title>
+
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<!-- <meta http-equiv="cleartype" content="on"> -->
+	
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+
+</head>
+<body>
+
+
+
+<!-- Home Page -->
+	<div data-role="page" id="bronze">
+
+		<div data-role="header" data-position="fixed">
+			<h1>Bronze</h1>
+		</div>
+
+		<div data-role="content">
+			<center>
+			<h1 id="headline">Apartment Tracker</h1>
+			<img src="img/apartment.png" />
+			</center>
+			<p><a href="additem.html" data-role="button" data-icon="arrow-r" data-iconpos="right" data-ajax="false">Add Apartment</a></p>
+
+			<ul data-role="listview" data-inset="true" data-filter="true">
+				<li data-role="list-divider">Browse by Apartment</li>
+				<li>
+				<div class="ui-grid-b">
+				<div class="ui-block-a"><img src="img/Vacant Available.png"><br/><a href="#vab">Vacant<br/>Available</a></div>
+				<div class="ui-block-b"><img src="img/Vacant Rented.png"><br/><a href="#vrb">Vacant<br/>Rented</a></div>
+				<div class="ui-block-c"><img src="img/Notice Available.png"><br/><a href="#nab">Notice<br/>Available</a></div>
+				</div><!-- /grid-b -->
+				</li>
+			</ul>
+		</div>
+
+				
+
+
+
+
+
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="index.html" data-ajax="false">Home</a></li>
+					<li><a href="#superb">Super</a></li>
+					<li><a href="http://feeds.weatherbug.com/rss.aspx?zipcode=89142&feed=currtxt,fcsttxt&zcode=z4641">News</a></li>
+					<li><a href="#aboutb">About</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+
+
+<!-- Vacant Available Page -->
+	<div data-role="page" id="vab" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed" data-theme="d">
+			<h1>Vacant Available</h1>
+		</div>
+		
+		<div data-role="content">
+			<ul data-role="listview" data-inset="true" >
+				<li>
+					<h3>Vacant Available</h3>
+					<p>Empty apartment needs</p><p>maintenance done.</p>
+				</li>
+			</ul>		
+		</div>
+
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="index.html" data-ajax="false">Home</a></li>
+					<li><a href="#superb">Super</a></li>
+					<li><a href="http://feeds.weatherbug.com/rss.aspx?zipcode=89142&feed=currtxt,fcsttxt&zcode=z4641">News</a></li>
+					<li><a href="#aboutb">About</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+
+
+<!-- Vacant Rented Page -->
+	<div data-role="page" id="vrb" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed" data-theme="d">
+			<h1>Vacant Rented</h1>
+		</div>
+
+		<div data-role="content">
+			<ul data-role="listview" data-inset="true" >
+				<li>
+					<h3>Vacant Rented</h3>
+					<p>Empty apartment has</p><p>someone moving in.</p>
+				</li>
+			</ul>
+		</div>
+
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="index.html" data-ajax="false">Home</a></li>
+					<li><a href="#superb">Super</a></li>
+					<li><a href="http://feeds.weatherbug.com/rss.aspx?zipcode=89142&feed=currtxt,fcsttxt&zcode=z4641">News</a></li>
+					<li><a href="#aboutb">About</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+<!-- Notice Available Page -->
+	<div data-role="page" id="nab" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed" data-theme="d">
+			<h1>Notice Available</h1>
+		</div>
+
+		<div data-role="content">
+			<ul data-role="listview" data-inset="true" >
+				<li>
+					<h3>Notice Available</h3>
+					<p>Resident that will be moving</p><p>out soon.</p>
+				</li>
+			</ul>
+		</div>
+
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="index.html" data-ajax="false">Home</a></li>
+					<li><a href="#superb">Super</a></li>
+					<li><a href="http://feeds.weatherbug.com/rss.aspx?zipcode=89142&feed=currtxt,fcsttxt&zcode=z4641">News</a></li>
+					<li><a href="#aboutb">About</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+<!-- About Page -->
+	<div data-role="page" id="aboutb">
+
+		<div data-role="header" data-position="fixed">
+			<h1>About</h1>
+		</div>
+
+		<div data-role="content">
+
+			<ul data-role="listview" data-inset="true">
+				<!-- NOTE: After clicking App A or App B from the About Page you must refresh when at the home screen or the footer buttons will not work. Need to add auto refresh when those buttons are clicked. -->
+				<li data-role="list-divider">Link to Apps</li>
+				<li><a href="http://ezcaflowne.github.com/MIU/ayotte_willson_project4/gold/">Gold</a></li>
+				<li><a href="index.html" data-ajax="false">Bronze</a></li>
+				
+				<li data-role="list-divider">Git Link Master</li>
+				<li>https://github.com/Ezcaflowne/MIU</li>
+				
+				<li data-role="list-divider">Git Link gh-pages</li>
+				<li>https://github.com/Ezcaflowne/MIU/tree/gh-pages</li>
+			
+				<li data-role="list-divider">Thumbnail Grid</li>
+				<li>
+				<div class="ui-grid-b">
+				<div class="ui-block-a"><img src="img/Vacant Available.png">Vacant Available</div>
+				<div class="ui-block-b"><img src="img/Vacant Rented.png">Vacant Rented</div>
+				<div class="ui-block-c"><img src="img/Notice Available.png">Notice Available</div>
+				</div><!-- /grid-b -->
+				</li>
+			</ul>
+		</div>
+
+
+		<div data-role="footer" data-position="fixed">
+			
+			<div data-role="navbar">
+				
+				<ul>
+					<li><a href="index.html" data-ajax="false">Home</a></li>
+					<li><a href="#superb">Super</a></li>
+					<li><a href="http://feeds.weatherbug.com/rss.aspx?zipcode=89142&feed=currtxt,fcsttxt&zcode=z4641">News</a></li>
+					<li><a href="#aboutb">About</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+<!-- Supervisor Page -->
+	<div data-role="page" id="superb">
+
+		<div data-role="header" data-position="fixed">
+			<h1>Supervisor</h1>
+		</div>
+
+		<div data-role="content">
+
+			<div data-role="collapsible" data-collapsed="true">
+				<h3>Fourth Quarter Inspection Notes</h3>
+				<p>95.6% on our inspection this time, way to step it up.</p>
+				<p>Next year we got to keep on top of those work requests.</p>
+			</div>	
+
+			<div data-role="collapsible" data-collapsed="true">
+				<h3>Third Quarter Inspection Notes</h3>
+				<p>84.6%! What happened?</p>
+				<p>The trash all over the ground didn't help us...</p>
+				<p>MSDS papers were out of date.</p>
+			</div>			
+
+			<div data-role="collapsible" data-collapsed="true">
+				<h3>Second Quarter Inspection Notes</h3>
+				<p>93.2% We are getting better.</p>
+				<p>More work requests need to be completed on time.</p>
+			</div>
+
+			<div data-role="collapsible" data-collapsed="true">
+				<h3>First Quarter Inspection Notes</h3>
+				<p>We got a 91.3% on our inspection</p>
+				<p>We need to step it up on our apartment maintenance.</p>
+			</div>
+		</div>
+
+		<div data-role="footer" data-position="fixed">
+			
+			<div data-role="navbar">
+				
+				<ul>
+					<li><a href="index.html" data-ajax="false">Home</a></li>
+					<li><a href="#superb">Super</a></li>
+					<li><a href="http://feeds.weatherbug.com/rss.aspx?zipcode=89142&feed=currtxt,fcsttxt&zcode=z4641">News</a></li>
+					<li><a href="#aboutb">About</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+
+
+<!-- JavaScript under here -->
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
