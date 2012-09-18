@@ -1,0 +1,403 @@
+<!doctype html>  <!-- GOLD -->
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	
+	<title>Apartment Tracker</title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+	
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+	<link rel="stylesheet" href="css/jquery.clearable.css" type="text/css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+
+</head>
+<body>
+
+
+
+<!---------------------------------------------- Home Page ------------------------------------------>
+	<div data-role="page" id="gold">
+		
+		<div data-role="header">
+			<img id="logo" src="img/logo.png"/>
+		</div>
+
+		<div id="hbgimg" data-role="content">
+			<center>
+				<p><a href="#additem" data-ajax="false" data-role="button" data-icon="arrow-r" data-iconpos="right">Add Apartment</a></p>
+			</center>
+				<ul data-role="listview" data-inset="true" data-filter="true">
+					<li data-role="list-divider">Browse by Apartment</li>
+					<li><a href="#vaa">
+					<img src="img/Vacant Available.png"/>
+					<h3>Vacant Available</h3>
+					</a></li>
+					<li><a href="#vra">
+					<img src="img/Vacant Rented.png" />
+					<h3>Vacant Rented</h3>
+					</a></li>
+					<li><a href="#naa" >
+					<img src="img/Notice Available.png" />
+					<h3>Notice Available</h3>
+					</a></li>
+				</ul>
+		</div>
+
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#gold">Home</a></li>
+					<li><a href="supera">Super</a></li>
+					<li><a href="http://feeds.weatherbug.com/rss.aspx?zipcode=89142&feed=currtxt,fcsttxt&zcode=z4641">News</a></li>
+					<li><a href="#abouta">About</a></li>
+				</ul>
+			</div>
+		</div>
+	</div><!-- END HOME PAGE -->
+
+
+
+<!----------------------------------------------- Vacant Available Page ---------------------------------->
+	<div data-role="page" id="vaa">
+
+		<div data-role="header" data-position="fixed" data-theme="d">
+			<h1>Vacant Available</h1>
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#vaa" data-theme="b">Vac Available</a></li>
+					<li><a href="#vra">Vac Rented</a></li>
+					<li><a href="#naa">Note Avail</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div data-role="content">
+			<ul data-role="listview" data-inset="true" >
+				<li>
+					<img src="img/Vacant Available.png"/>
+					<h3>Vacant Available</h3>
+					<p>Empty apartment needs</p><p>maintenance done.</p>
+				</li>
+			</ul>		
+		</div>
+
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#gold">Home</a></li>
+					<li><a href="#supera">Super</a></li>
+					<li><a href="http://feeds.weatherbug.com/rss.aspx?zipcode=89142&feed=currtxt,fcsttxt&zcode=z4641">News</a></li>
+					<li><a href="#abouta">About</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div><!-- END VACANT AVAILABLE -->
+
+
+
+<!---------------------------------------- Vacant Rented Page -------------------------------------------->
+	<div data-role="page" id="vra">
+
+		<div data-role="header" data-position="fixed" data-theme="d">
+			<h1>Vacant Rented</h1>
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#vaa">Vac Available</a></li>
+					<li><a href="#vra" data-theme="b">Vac Rented</a></li>
+					<li><a href="#naa">Note Avail</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div data-role="content">
+			<ul data-role="listview" data-inset="true" >
+				<li>
+					<img src="img/Vacant Rented.png"/>
+					<h3>Vacant Rented</h3>
+					<p>Empty apartment has</p><p>someone moving in.</p>
+				</li>
+			</ul>
+		</div>
+
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#gold">Home</a></li>
+					<li><a href="#supera">Super</a></li>
+					<li><a href="http://feeds.weatherbug.com/rss.aspx?zipcode=89142&feed=currtxt,fcsttxt&zcode=z4641">News</a></li>
+					<li><a href="#abouta">About</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div><!-- END VACANT RENTED -->
+
+
+<!-------------------------------------- Notice Available Page -------------------------------------->
+	<div data-role="page" id="naa">
+
+		<div data-role="header" data-position="fixed" data-theme="d">
+			<h1>Notice Available</h1>
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#vaa">Vac Available</a></li>
+					<li><a href="#vra">Vac Rented</a></li>
+					<li><a href="#naa" data-theme="b">Note Avail</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div data-role="content">
+			<ul data-role="listview" data-inset="true" >
+				<li>
+					<img src="img/Notice Available.png"/>
+					<h3>Notice Available</h3>
+					<p>Resident that will be moving</p><p>out soon.</p>
+				</li>
+			</ul>
+		</div>
+
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#gold">Home</a></li>
+					<li><a href="#supera">Super</a></li>
+					<li><a href="http://feeds.weatherbug.com/rss.aspx?zipcode=89142&feed=currtxt,fcsttxt&zcode=z4641">News</a></li>
+					<li><a href="#abouta">About</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div><!-- END NOTICE AVAILABLE -->
+
+
+
+
+<!--------------------------------------------- About Page ------------------------------------------>
+	<div data-role="page" id="abouta">
+
+		<div data-role="header">
+			<h1>About</h1>
+		</div>
+
+		<div data-role="content">
+
+			<ul data-role="listview" data-inset="true">
+				<!-- NOTE: After clicking App A or App B from the About Page you must refresh when at the home screen or the footer buttons will not work. Need to add auto refresh when those buttons are clicked. -->
+				<li data-role="list-divider">Link to Apps</li>
+				<li><a href="index.html" data-ajax="flase">Gold</a></li>
+				<li><a href="http://ezcaflowne.github.com/MIU/ayotte_willson_project4/bronze/">Bronze</a></li>
+				
+				<li data-role="list-divider">Git Link Master</li>
+				<li>https://github.com/Ezcaflowne/MIU</li>
+				<li data-role="list-divider">Git Link gh-pages</li>
+				<li>https://github.com/Ezcaflowne/MIU/tree/<br />gh-pages</li>
+
+				<li data-role="list-divider">Thumbnail + Text</li>
+				<li><img src="img/Vacant Available.png">Vacant Available Apartment Icon</li>
+				<li><img src="img/Vacant Rented.png">Vacant Rented Apartment Icon</li>
+				<li><img src="img/Notice Available.png">Notice Available Apartment Icon</li>
+			</ul>		
+		</div>
+
+
+		<div data-role="footer" data-position="fixed">
+			
+			<div data-role="navbar">
+				
+				<ul>
+					<li><a href="#gold">Home</a></li>
+					<li><a href="#supera">Super</a></li>
+					<li><a href="http://feeds.weatherbug.com/rss.aspx?zipcode=89142&feed=currtxt,fcsttxt&zcode=z4641">News</a></li>
+					<li><a href="#abouta">About</a></li>
+				</ul>
+			</div>
+		</div>
+	</div><!-- END ABOUT PAGE -->
+
+
+<!----------------------------------------- Supervisor Page -------------------------------------->
+	<div data-role="page" id="supera">
+
+		<div data-role="header">
+			<h1>Supervisor</h1>
+		</div>
+
+		<div data-role="content">
+
+			<div data-role="collapsible-set">
+
+				<div data-role="collapsible" data-collapsed="true">
+					<h3>Fourth Quarter Inspection Notes</h3>
+					<p>95.6% on our inspection this time, way to step it up.</p>
+					<p>Next year we got to keep on top of those work requests.</p>
+				</div>
+
+				<div data-role="collapsible" data-collapsed="true">
+					<h3>Third Quarter Inspection Notes</h3>
+					<p>84.6%! What happened?</p>
+					<p>The trash all over the ground didn't help us...</p>
+					<p>MSDS papers were out of date.</p>
+				</div>
+
+				<div data-role="collapsible" data-collapsed="true">
+					<h3>Second Quarter Inspection Notes</h3>
+					<p>93.2% We are getting better.</p>
+					<p>More work requests need to be completed on time.</p>
+				</div>
+
+				<div data-role="collapsible" data-collapsed="true">
+					<h3>First Quarter Inspection Notes</h3>
+					<p>We got a 91.3% on our inspection</p>
+					<p>We need to step it up on our apartment maintenance.</p>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div data-role="footer" data-position="fixed">
+			
+			<div data-role="navbar">
+				
+				<ul>
+					<li><a href="#gold">Home</a></li>
+					<li><a href="#supera">Super</a></li>
+					<li><a href="http://feeds.weatherbug.com/rss.aspx?zipcode=89142&feed=currtxt,fcsttxt&zcode=z4641">News</a></li>
+					<li><a href="#abouta">About</a></li>
+				</ul>
+			</div>
+		</div>
+	</div><!-- END SUPERVISOR PAGE -->
+
+
+<!--------------------------------------- ADD APARTMENT PAGE ------------------------------------------>
+<div data-role="page" id="additem" data-add-back-btn="true" >
+
+	<div data-role="header">
+		<img id="logo" src="img/logo.png"/>
+    </div>
+    
+    <div data-role="content">
+
+        	<form action="" method="post" id="apartmentForm">
+
+                      <div data-role="fieldcontain" class="formfield">
+                      	<h5>*required fields*</h5>
+                	    <label for="aptType" class="select">*Type:</label>
+                	    <select name="aptType" id="aptType">
+                          <option data-placeholder="true">--Apartment Type--</option>
+                	      <option value="Vacant Available">Vacant Available</option>
+                	      <option value="Vacant Rented">Vacant Rented</option>
+                	      <option value="Notice Available">Notice Available</option>
+              	        </select>
+              	      </div>
+                      
+                      <div data-role="fieldcontain" class="formfield">
+                      	<label for="aptNum">*Number: </label>
+                      	<input type="text" name="aptNum" id="aptNum" value="" placeholder="Enter Apartment Number" class="required number"/>
+                      </div>
+
+                       <div data-role="fieldcontain" class="formfield">
+                      	<label for="aptSize">*Size: </label>
+                      	<input type="text" name="aptSize" id="aptSize" value="" placeholder="bedxbath" class="required"/>
+                      </div>
+
+                      <div data-role="fieldcontain">
+                      	<label for="vacDate">Vacate Date: </label>
+                      	<input type="date" name="vacDate" id="vacDate" placeholder="mm/dd/yy"/>
+                      </div>
+
+                      <div data-role="fieldcontain">
+                      	<label for="rdyDate">Ready Date: </label>
+                      	<input type="date" name="rdyDate" id="rdyDate" placeholder="mm/dd/yy"/>
+                      </div>
+
+                      <div data-role="fieldcontain">
+                      	<label for="isWhiteLock">Is it on White Lock?</label>
+                      	<select data-role="slider" id="isWhiteLock">
+                      		<option value="no">No</option>
+                      		<option value="yes">Yes</option>
+                      	</select>
+                      </div>
+
+                      <div data-role="fieldcontain">
+                      	<label for="isPower">Is there Power?</label>
+                      	<select data-role="slider" id="isPower">
+                      		<option value="no">No</option>
+                      		<option value="yes">Yes</option>
+                      	</select>
+                      </div>
+
+                      <div data-role="fieldcontain">
+                      	<label for="condition">Condition: </label>
+                        <input type="range" name="condition" id="condition" value="50" step="5" min="0" max="100" />
+                      </div>
+                    
+                     <div data-role="fieldcontain" class="formfield">
+                    	<label for="comments">Additional Comments:</label>
+                        <textarea id="comments" name="comments" class="foo" placeholder="Insert additional comments here."></textarea>
+                    </div>
+
+                	<div data-role="fieldcontain">
+					<input type="submit" value="Submit Apartment" id="submit" data-theme="a"/><br/><br/>
+					<input type="reset" value="Reset" id="reset" data-theme="b" onClick="window.location.reload()"/>
+                    </div>
+                    <a href="#apartmentFormErrors" id="apartmenterrorslink" data-rel="dialog" data-transition="pop">Open Errors</a>
+                    
+    </div>
+    
+    	<div data-role="fieldcontain" id="showData" class="formfield"></div>
+         <footer id="addfooter">           
+      	<div data-role="button" id="displayLink" data-inline="true" data-mini="true" data-theme="e">Display Apartments</div>
+   	  	<div data-role="button" id="clearLink"    data-inline="true" data-mini="true" data-theme="e">Clear Apartments</div>
+      	<div data-role="button" id="addNew" data-inline="true" class="ui-disabled" data-mini="true" data-theme="e">Add New Apartment</div>
+      	</footer>
+      
+      	<div data-role="footer" data-position="fixed">
+    		<div data-role="navbar">		
+    			<ul>
+					<li><a href="#gold">Home</a></li>
+					<li><a href="#supera">Super</a></li>
+					<li><a href="http://feeds.weatherbug.com/rss.aspx?zipcode=89142&feed=currtxt,fcsttxt&zcode=z4641">News</a></li>
+					<li><a href="#abouta">About</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+<!------------------------------------- ERROR PAGE -------------------------------------->
+<div data-role="dialog" id="apartmentFormErrors">
+
+	<div data-role="header" data-position="fixed">
+		<h1>Missing Fields</h1>
+	</div>
+
+	<div data-role="content">
+		<p>Test</p>
+	</div>
+</div>
+
+
+<!-- JavaScript under here -->
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+	<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="js/libs/jquery.clearable.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/JSON.js"></script>
+</body>
+</html>

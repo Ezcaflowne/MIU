@@ -1,0 +1,7 @@
+a.clearlink {
+	background: url(close-button.png) no-repeat ;
+	display: inline-block;	
+	height: 12px;
+	width: 12px;
+	margin-left: 5px;
+}

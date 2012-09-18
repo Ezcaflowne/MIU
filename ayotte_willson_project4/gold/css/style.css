@@ -1,0 +1,106 @@
+/*Name: Willson Ayotte
+Date: Aug 30th, 2012
+Document: CSS for Apartment Application
+Decription: For MIU 1209
+*/
+
+label.error{
+	display: block;
+	margin: 10px 0;
+	color:#cc0000;
+}
+
+#apartmenterrorslink{
+	display: none;
+}
+
+ul li {
+	list-style-type: none;
+}
+
+ul {
+	background: white;
+	color: black;
+	padding: 10px;
+	margin-bottom: 30px;
+	margin-top: -10px;
+}
+
+#logo{
+	padding-top: 5px;
+	background: center;
+	max-width: 320px;
+	padding-bottom: -100px;
+}
+
+#hbgimg {
+	background: url(city.png);
+	background-position: left bottom;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    max-width: 320px;
+	color: white;
+}
+
+#additem {
+	background: url(city.png);
+	background-position: left bottom;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+	color: white;
+}
+
+#supera{
+	background: url(city.png);
+	background-position: left bottom;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+	color: white;
+}
+
+#abouta{
+	background: url(city.png);
+	background-position: left bottom;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+	color: white;
+}
+
+#vaa{
+	background: url(city.png);
+	background-position: left bottom;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+	color: white;
+}
+
+#vra{
+	background: url(city.png);
+	background-position: left bottom;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+	color: white;
+}
+
+#naa{
+	background: url(city.png);
+	background-position: left bottom;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+	color: white;
+}
+
+#addfooter{
+	margin-bottom: 20px;
+}
+
+button {
+	display: block;
+	font-weight: bold;
+	text-align: center;
+	float:left;
+	margin-bottom: 30px;
+	margin-top: 10px;
+	width:120px;
+	height:31px;
+}
