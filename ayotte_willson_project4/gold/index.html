@@ -28,7 +28,7 @@
 
 
 <!---------------------------------------------- Home Page ------------------------------------------>
-	<div data-role="page" id="gold">
+	<div data-role="page" id="gold" data-theme="a">
 		
 		<div data-role="header">
 			<img id="logo" src="img/logo.png"/>
@@ -36,7 +36,7 @@
 
 		<div id="hbgimg" data-role="content">
 			<center>
-				<p><a href="#additem" data-ajax="false" data-role="button" data-icon="arrow-r" data-iconpos="right">Add Apartment</a></p>
+				<p><a href="#additem" id="additembutton" data-ajax="false" data-role="button" data-icon="arrow-r" data-iconpos="right">Add Apartment</a></p>
 			</center>
 				<ul data-role="listview" data-inset="true" data-filter="true">
 					<li data-role="list-divider">Browse by Apartment</li>
@@ -59,7 +59,7 @@
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#gold">Home</a></li>
-					<li><a href="supera">Super</a></li>
+					<li><a href="#supera">Super</a></li>
 					<li><a href="http://feeds.weatherbug.com/rss.aspx?zipcode=89142&feed=currtxt,fcsttxt&zcode=z4641">News</a></li>
 					<li><a href="#abouta">About</a></li>
 				</ul>
@@ -70,10 +70,10 @@
 
 
 <!----------------------------------------------- Vacant Available Page ---------------------------------->
-	<div data-role="page" id="vaa">
+	<div data-role="page" id="vaa" data-theme="a">
 
-		<div data-role="header" data-position="fixed" data-theme="d">
-			<h1>Vacant Available</h1>
+		<div data-role="header" data-position="fixed">
+			<img id="logo" src="img/logo.png"/>
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#vaa" data-theme="b">Vac Available</a></li>
@@ -109,10 +109,10 @@
 
 
 <!---------------------------------------- Vacant Rented Page -------------------------------------------->
-	<div data-role="page" id="vra">
+	<div data-role="page" id="vra" data-theme="a">
 
-		<div data-role="header" data-position="fixed" data-theme="d">
-			<h1>Vacant Rented</h1>
+		<div data-role="header" data-position="fixed">
+			<img id="logo" src="img/logo.png"/>
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#vaa">Vac Available</a></li>
@@ -147,10 +147,10 @@
 
 
 <!-------------------------------------- Notice Available Page -------------------------------------->
-	<div data-role="page" id="naa">
+	<div data-role="page" id="naa" data-theme="a">
 
-		<div data-role="header" data-position="fixed" data-theme="d">
-			<h1>Notice Available</h1>
+		<div data-role="header" data-position="fixed">
+			<img id="logo" src="img/logo.png"/>
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#vaa">Vac Available</a></li>
@@ -187,10 +187,11 @@
 
 
 <!--------------------------------------------- About Page ------------------------------------------>
-	<div data-role="page" id="abouta">
+	<div data-role="page" id="abouta" data-theme="a">
 
 		<div data-role="header">
 			<h1>About</h1>
+			<img id="logo" src="img/logo.png"/>
 		</div>
 
 		<div data-role="content">
@@ -214,7 +215,7 @@
 		</div>
 
 
-		<div data-role="footer" data-position="fixed">
+		<div data-role="footer" data-position="fixed" data-theme="c">
 			
 			<div data-role="navbar">
 				
@@ -230,10 +231,11 @@
 
 
 <!----------------------------------------- Supervisor Page -------------------------------------->
-	<div data-role="page" id="supera">
+	<div data-role="page" id="supera" data-theme="a">
 
 		<div data-role="header">
 			<h1>Supervisor</h1>
+			<img id="logo" src="img/logo.png"/>
 		</div>
 
 		<div data-role="content">
@@ -285,7 +287,7 @@
 
 
 <!--------------------------------------- ADD APARTMENT PAGE ------------------------------------------>
-<div data-role="page" id="additem" data-add-back-btn="true" >
+<div data-role="page" id="additem" data-add-back-btn="true" data-theme="a">
 
 	<div data-role="header">
 		<img id="logo" src="img/logo.png"/>
@@ -347,10 +349,15 @@
                         <input type="range" name="condition" id="condition" value="50" step="5" min="0" max="100" />
                       </div>
                     
-                     <div data-role="fieldcontain" class="formfield">
+                    <!--  <div data-role="fieldcontain" class="formfield">
                     	<label for="comments">Additional Comments:</label>
                         <textarea id="comments" name="comments" class="foo" placeholder="Insert additional comments here."></textarea>
-                    </div>
+                    </div> -->
+
+                    <div data-role="fieldcontain"> 
+                    	<label for="textarea">Textarea:</label> 
+                    	<textarea cols="40" rows="8" name="textarea" id="textarea"></textarea> </div>
+
 
                 	<div data-role="fieldcontain">
 					<input type="submit" value="Submit Apartment" id="submit" data-theme="a"/><br/><br/>
@@ -361,7 +368,7 @@
     </div>
     
     	<div data-role="fieldcontain" id="showData" class="formfield"></div>
-         <footer id="addfooter">           
+         <footer id="addfooter"><p id="foottext">Navagation</p>    
       	<div data-role="button" id="displayLink" data-inline="true" data-mini="true" data-theme="e">Display Apartments</div>
    	  	<div data-role="button" id="clearLink"    data-inline="true" data-mini="true" data-theme="e">Clear Apartments</div>
       	<div data-role="button" id="addNew" data-inline="true" class="ui-disabled" data-mini="true" data-theme="e">Add New Apartment</div>
@@ -380,7 +387,7 @@
 	</div>
 
 <!------------------------------------- ERROR PAGE -------------------------------------->
-<div data-role="dialog" id="apartmentFormErrors">
+<div data-role="dialog" id="apartmentFormErrors" data-theme="a">
 
 	<div data-role="header" data-position="fixed">
 		<h1>Missing Fields</h1>
