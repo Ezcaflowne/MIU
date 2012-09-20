@@ -4,3 +4,215 @@ Document: CSS for Apartment Application
 Decription: For MIU 1209
 */
 
+ul li {
+	list-style-type: none;
+}
+
+ul.item {
+	background: url(background1.png);
+	background-position: left bottom;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+	color: white;
+	padding: 10px;
+	margin-bottom: 30px;
+	margin-top: -10px;
+	font-weight: bold;
+}
+
+ul li button {
+	background: -webkit-linear-gradient(top, rgba(69,72,77,1) 0%,rgba(45,45,45,1) 100%);
+	color: lightgrey;
+	border-radius: 20px;
+	font-size: 12px;
+	width: 130px;
+	height: 25px
+}
+
+#logo {
+	padding-top: 5px;
+	background: center;
+	width: 320px;
+	padding-bottom: 30px;
+	margin-left: -10px;
+}
+
+#homelogo {
+	padding-top: 5px;
+	background: center;
+	width: 320px;
+}
+
+#errors{
+    color: red;
+    background: white;
+    border-radius: 10px;
+    width: 180px;
+    padding-top: 10px;
+}
+
+#range { 
+  position: center;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#444444), to(#999999));
+  background-image: -webkit-linear-gradient(top, #444444, #999999);
+  width: 40px; 
+  height: 30px; 
+  text-align: center; 
+  color: white; 
+  border-radius: 10px; 
+  display: inline-block; 
+  font: bold 15px/30px Lucida Grande;
+  bottom: 175%;
+  left: 0;
+  margin-left: 10px;
+}
+
+body {
+    font-family: "Lucida Grande", "Arial", sans-serif;
+}
+
+#bronze {
+	background: url(background1.png);
+	background-position: left bottom;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    max-width: 320px;
+	color: white;
+}
+
+#vab {
+	background: url(background1.png);
+	background-position: left bottom;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    max-width: 320px;
+	color: white;
+}
+
+#vrb {
+	background: url(background1.png);
+	background-position: left bottom;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    max-width: 320px;
+	color: white;
+}
+
+#nab {
+	background: url(background1.png);
+	background-position: left bottom;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    max-width: 320px;
+	color: white;
+}
+
+#aboutb {
+	background: url(background1.png);
+	background-position: left bottom;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    max-width: 320px;
+	color: white;
+}
+
+#superb {
+	background: url(background1.png);
+	background-position: left bottom;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    max-width: 320px;
+	color: white;
+}
+
+#bodyimg {
+	background: url(background1.png);
+	background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+	color: white;
+}
+
+#condition{
+    width: 145px;
+}
+
+#aptType{
+    width: 215px;
+}
+
+input:focus, 
+textarea:focus, 
+#date:focus {
+background-color: gold;
+}
+
+div ul {
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    margin: 5px;
+    border-bottom: solid black 2px;
+    /*Play with this<<<<<<<<<<<<<<<<<<<<<<<<<*/
+}
+
+input {
+    font-size: 15px;
+    width: 200px;
+}
+
+select {
+    font-size: 15px;
+}
+
+label {
+    display: block;
+}
+
+li {
+    margin-left: -40px;
+}
+
+textarea {
+    font-size: 14px;
+    width: 210px;
+    height: 100px;
+}
+
+
+#displayLink{
+  width: 200px;
+  padding: 9px;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+#clearLink{
+  width: 200px;
+  padding: 9px;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+#addNew{
+  width: 200px;
+  padding: 9px;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+#apartmentFieldset{
+    /*background-color: lightgrey;*/
+    border-radius: 10px;
+}
+
+#searchFieldset{
+    /*background-color: lightgrey;*/
+    border-radius: 10px;
+}
+
+#copyWright{color:lightblue;}
