@@ -17,23 +17,18 @@ Term:  1209
 		<title>Add/Edit Apartments</title><!-- title of page, shows in a tab or head of browser -->
 		<link rel="stylesheet" type="text/css" href="css/style.css"><!-- Importing the style sheet -->
 	</head>
-	<body>
+	<body id="bodyimg">
 		<header>
-			<center>
-			<h1 id="headline">Add Aparment</h1><!-- header title of html page -->
-			<img src="img/apartment.png">
-			</center>
+			<img id="logo" src="img/logo.png">
 		</header>
-			<form action="#" method="post" id="searchForm" />
+			<form action="#" method="post" id="searchForm">
 				<fieldset id="searchFieldset">
 					
 					<ul>
-					<li><label for="aptNum" id="searchhead">Search Apartment Number: </label><input type="text" id="search" /></li>
+						<li><label for="aptNum" id="searchhead">Search Apartment Number: </label><input type="text" id="search" /></li>
 					</ul>
+					<input type="button" value="search" id="searchBtn" /><br />
 				</fieldset>
-				<center>
-				<input type="button" value="search" id="searchBtn" /><br />
-				</center>
 			</form>
 			<br />
 			
@@ -56,12 +51,13 @@ Term:  1209
 							document.getElementById("range").innerHTML=newValue;
 						}
                      	</script>
-						<li><label for="comments">Additional Comments:</label><textarea id="comments"></textarea> <!-- add aditional comments field -->
+						<li><label for="comments">Comments:</label><br /><textarea id="comments"></textarea> <!-- add aditional comments field -->
 					</ul>
+					<input type="submit" value="Submit Apartment" id="submit" /><br /><!-- submit button to submit the data into the database -->
+					<input type="reset" value="Reset" id="reset" onClick="window.location.reload()"/><br /><br />
 				</fieldset><!-- end of apartment info field -->
 			</form>
-		<input type="submit" value="Submit Apartment" id="submit" /><br /><br /><!-- submit button to submit the data into the database -->
-			<nav>
+			<nav id="navlist">
 				<ul>
 					<li><input type="submit" value="Display Apartments" href="#" id="displayLink"></li><!-- links to clear stored data and to display data in database -->
 					<li><input type="submit" value="Clear Apartments" href="#" id="clearLink"></li>
@@ -69,7 +65,6 @@ Term:  1209
     				onclick="window.location='additem.html';" /></li>
 				</ul>
 			</nav>
-			<input type="hidden" value="today" id="today"/><br />
 	<label id="copyWright"><small>Terms & Conditions
 	&copy;2012 Ezcaflowne. All Rights Reserved.</small></label><!-- my personal copywrite with my online name -->
 	<script src="js/json.js" type="text/javascript"></script><!-- REMEMBER TO REMOVE THIS BEFORE PRODUCTION -->

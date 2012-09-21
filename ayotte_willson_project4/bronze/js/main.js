@@ -115,10 +115,10 @@ window.addEventListener("DOMContentLoaded", function(){
             item.aptSize        = ["Apartment Size:", ge("aptSize").value];
             item.vacDate        = ["Vacate:", ge("vacDate").value];
             item.rdyDate        = ["Ready:", ge("rdyDate").value];
-            item.isPower        = ["Power?", isPowerValue];
-            item.isWhiteLock    = ["Whitelock?", isWhitelockValue];
+            item.isPower        = ["Power:", isPowerValue];
+            item.isWhiteLock    = ["Whitelock:", isWhitelockValue];
             item.condition      = ["Condition:", ge("condition").value];
-            item.comments       = ["Additional Comments:", ge("comments").value];
+            item.comments       = ["Comments:", ge("comments").value];
         // Save data into localStorage: Use Stringify to convert our object to a string.
         localStorage.setItem(id, JSON.stringify(item));
         alert("Apartment is Saved!");
